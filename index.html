@@ -124,13 +124,20 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, doc, getDoc, addDoc, setDoc, updateDoc, deleteDoc, onSnapshot, collection, query, where, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { getFirestore, doc, getDoc, addDoc, setDoc, updateDoc, deleteDoc, onSnapshot, collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-        // Global Variables
-        const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
-        const __initial_auth_token = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : undefined;
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAxWxCRvS0hBKsxqV0Zbr2WZbRYHomxWtY",
+            authDomain: "car-price-viewer.firebaseapp.com",
+            projectId: "car-price-viewer",
+            storageBucket: "car-price-viewer.appspot.com",
+            messagingSenderId: "577380544164",
+            appId: "1:577380544164:web:278cfd2b43059168ee8031",
+            measurementId: "G-4T0499BQ75"
+        };
 
-        // Firebase Initialization
+        // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const db = getFirestore(app);
@@ -236,7 +243,7 @@
         });
 
         // =========================================================
-        // 原有程式碼 (已移至這裡，並在認證成功後呼叫)
+        // The rest of your existing code
         // =========================================================
         const carnumSearchInput = document.getElementById('carnumSearchInput');
         const brandSelect = document.getElementById('brandSelect');
@@ -246,11 +253,9 @@
         const errorBox = document.getElementById('errorBox');
         const errorMessage = document.getElementById('errorMessage');
 
-        // XML 檔案的固定網址
         const xmlUrl = "https://raw.githubusercontent.com/den3315x-tai/price/refs/heads/main/CAR-P.xml";
-        let allCarData = []; // 用來儲存所有車輛資料
+        let allCarData = []; 
 
-        // 欄位名稱對應
         const fieldNames = {
             carnum: '車號',
             brand: '品牌',
@@ -261,18 +266,15 @@
             op: '售價'
         };
 
-        // 當品牌選單改變時，更新車型選單和表格
         brandSelect.addEventListener('change', () => {
             populateTypeDropdown(brandSelect.value);
             updateTableDisplay();
         });
 
-        // 當車型選單改變時，更新表格
         typeSelect.addEventListener('change', () => {
             updateTableDisplay();
         });
 
-        // 當車號搜尋欄位改變時，更新表格
         carnumSearchInput.addEventListener('input', () => {
             updateTableDisplay();
         });
@@ -342,7 +344,7 @@
                 brandSelect.appendChild(option);
             });
             brandSelect.disabled = false;
-            populateTypeDropdown(''); // 預設清空車型選單
+            populateTypeDropdown('');
         }
 
         function populateTypeDropdown(selectedBrand) {
@@ -390,10 +392,9 @@
 
             const table = document.createElement('table');
             table.className = "min-w-full divide-y divide-gray-200 border border-gray-200 rounded-lg table-responsive";
-            tableContainer.innerHTML = ''; // 清空內容
+            tableContainer.innerHTML = '';
             tableContainer.appendChild(table);
 
-            // 建立表頭
             const thead = table.createTHead();
             const headerRow = thead.insertRow();
             const headers = Object.keys(data[0]);
@@ -406,7 +407,6 @@
                 headerRow.appendChild(th);
             });
 
-            // 建立表格內容
             const tbody = table.createTBody();
             data.forEach(rowData => {
                 const row = tbody.insertRow();
