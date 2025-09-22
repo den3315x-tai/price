@@ -1,0 +1,4007 @@
+<CAR>
+  <xs:schema id="CAR" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="CAR" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="CAR-P">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="carnum" type="xs:string" minOccurs="0" />
+                <xs:element name="brand" type="xs:string" minOccurs="0" />
+                <xs:element name="type" type="xs:string" minOccurs="0" />
+                <xs:element name="yaer" type="xs:string" minOccurs="0" />
+                <xs:element name="cc" type="xs:string" minOccurs="0" />
+                <xs:element name="c" type="xs:string" minOccurs="0" />
+                <xs:element name="state" type="xs:string" minOccurs="0" />
+                <xs:element name="source" type="xs:string" minOccurs="0" />
+                <xs:element name="op" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <CAR-P>
+    <carnum>X</carnum>
+    <brand>TOYOTA</brand>
+    <type>堆高機</type>
+    <yaer>2000</yaer>
+    <cc>?</cc>
+    <c>?</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>3550-GP</carnum>
+    <brand>FORD</brand>
+    <type>METROSTAR</type>
+    <yaer>03/06</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>AQL-2960</carnum>
+    <brand>MAZDA</brand>
+    <type>PREMACY</type>
+    <yaer>03/01</yaer>
+    <cc>2.0</cc>
+    <c>淺棕</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>AFW-3886</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>02/07</yaer>
+    <cc>1.8</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>3160-X3</carnum>
+    <brand>HYUNDAI</brand>
+    <type>I30</type>
+    <yaer>10/01</yaer>
+    <cc>1.6 (柴)</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>441-TT</carnum>
+    <brand>其他</brand>
+    <type>順益遊覽車</type>
+    <yaer>12/04</yaer>
+    <cc>7.5 (柴)</cc>
+    <c>白 紫 銀</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>TD-8168</carnum>
+    <brand>BENZ</brand>
+    <type>220E</type>
+    <yaer>93/06</yaer>
+    <cc>2.2</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>9.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>3687-XL</carnum>
+    <brand>BENZ</brand>
+    <type>E240</type>
+    <yaer>03/05</yaer>
+    <cc>2.6</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>17.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BKF-2152</carnum>
+    <brand>FORD</brand>
+    <type>ACTIVA</type>
+    <yaer>00/11</yaer>
+    <cc>1.6</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>5712-MB</carnum>
+    <brand>NISSAN</brand>
+    <type>VERITA</type>
+    <yaer>05/01</yaer>
+    <cc>1275</cc>
+    <c>淺棕</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>AGJ-2960</carnum>
+    <brand>LEXUS</brand>
+    <type>LS460</type>
+    <yaer>07/06</yaer>
+    <cc>4.7</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>1</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BMP-8523</carnum>
+    <brand>ISUZU</brand>
+    <type>ELF</type>
+    <yaer>01/09</yaer>
+    <cc>3.1 (柴.框式.升降機)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>AZE-9153</carnum>
+    <brand>MAZDA</brand>
+    <type>TRIBUTE</type>
+    <yaer>04/09</yaer>
+    <cc>2.3</cc>
+    <c>銀 灰</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>4060-UK</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>DELICA</type>
+    <yaer>07/10</yaer>
+    <cc>2.0 (貨框)</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>KLF-3697</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>CANTER</type>
+    <yaer>20/08</yaer>
+    <cc>3.0 (柴、大貨)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>155.9 </op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>6808-X5</carnum>
+    <brand>NISSAN</brand>
+    <type>MARCH</type>
+    <yaer>06/07</yaer>
+    <cc>1.3</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>138.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>1331-JF</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>DELICA</type>
+    <yaer>04/04</yaer>
+    <cc>2.0 (貨框)</cc>
+    <c>白 彩繪</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>UD-9098</carnum>
+    <brand>TOYOTA</brand>
+    <type>ZACE</type>
+    <yaer>90/06</yaer>
+    <cc>1.5 (貨框)</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>6.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BDL-1761</carnum>
+    <brand>HYUNDAI</brand>
+    <type>VERNA</type>
+    <yaer>16/04</yaer>
+    <cc>1.6</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BHZ-7278</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>14/12</yaer>
+    <cc>1.8</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>26.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BMY-3177</carnum>
+    <brand>LEXUS</brand>
+    <type>UX200</type>
+    <yaer>19/02</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>89.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BJX-5980</carnum>
+    <brand>BENZ</brand>
+    <type>E250</type>
+    <yaer>13/07</yaer>
+    <cc>2.0</cc>
+    <c>深灰</c>
+    <state />
+    <source />
+    <op>49.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AGQ-8862</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>14/05</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>4456-UH</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>SAVRIN</type>
+    <yaer>02/07</yaer>
+    <cc>2.0</cc>
+    <c>黑 灰</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>AKT-9962</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>15/01</yaer>
+    <cc>1.8</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>4175-LS</carnum>
+    <brand>TOYOTA</brand>
+    <type>VIOS</type>
+    <yaer>05/2</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>ATT-8029</carnum>
+    <brand>NISSAN</brand>
+    <type>LIVINA</type>
+    <yaer>17/04</yaer>
+    <cc>1.6</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>ZW-4635</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VARICA</type>
+    <yaer>97/08</yaer>
+    <cc>1.1(貨篷)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>W2-5431</carnum>
+    <brand>NISSAN</brand>
+    <type>MARCH</type>
+    <yaer>99/03</yaer>
+    <cc>1.3</cc>
+    <c>深綠</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BHQ-2688</carnum>
+    <brand>BMW</brand>
+    <type>730I</type>
+    <yaer>16/07</yaer>
+    <cc>2.0</cc>
+    <c>深灰</c>
+    <state />
+    <source />
+    <op>106.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BWH-7509</carnum>
+    <brand>TOYOTA</brand>
+    <type>PRIUS PHV</type>
+    <yaer>17/02</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BSX-8216</carnum>
+    <brand>MAZDA</brand>
+    <type>MAZDA 3</type>
+    <yaer>23/10</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BAF-8772</carnum>
+    <brand>SUZUKI</brand>
+    <type>SOLIO</type>
+    <yaer>04/02</yaer>
+    <cc>1.3</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDD-2103</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VERYCA</type>
+    <yaer>21/02</yaer>
+    <cc>1.5 (貨廂)</cc>
+    <c>藍銀</c>
+    <state />
+    <source />
+    <op>35.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AYX-2175</carnum>
+    <brand>HONDA</brand>
+    <type>HR-V</type>
+    <yaer>18/09</yaer>
+    <cc>1.8</cc>
+    <c>深藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>ARD-2089</carnum>
+    <brand>HYUNDAI</brand>
+    <type>TUCSON</type>
+    <yaer>16/08</yaer>
+    <cc>2.0 (柴)</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>AMK-9192</carnum>
+    <brand>MAZDA</brand>
+    <type>MAZDA 3</type>
+    <yaer>10/01</yaer>
+    <cc>2.0</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>15.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AXF-8085</carnum>
+    <brand>VOLVO</brand>
+    <type>V60</type>
+    <yaer>18/07</yaer>
+    <cc>2.0</cc>
+    <c>深藍</c>
+    <state />
+    <source />
+    <op>69.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDN-6701</carnum>
+    <brand>OPEL</brand>
+    <type>GRANDLAND</type>
+    <yaer>23/09</yaer>
+    <cc>1.2</cc>
+    <c>白 黑</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDN-6712</carnum>
+    <brand>OPEL</brand>
+    <type>MOKKA</type>
+    <yaer>23/02</yaer>
+    <cc>1.2</cc>
+    <c>綠 黑</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>ARB-7378</carnum>
+    <brand>SMART</brand>
+    <type>FORFOUR</type>
+    <yaer>15/11-16/05</yaer>
+    <cc>898</cc>
+    <c>黑 紅</c>
+    <state />
+    <source />
+    <op>35.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BWT-2516</carnum>
+    <brand>MAZDA</brand>
+    <type>MAZDA 2</type>
+    <yaer>23/06-24/03</yaer>
+    <cc>1.5</cc>
+    <c>深紅</c>
+    <state />
+    <source />
+    <op>63.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BJU-0698</carnum>
+    <brand>BMW</brand>
+    <type>118I</type>
+    <yaer>18/04</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>52.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BSJ-5073</carnum>
+    <brand>MG</brand>
+    <type>HS</type>
+    <yaer>23/07</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>92.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AHZ-1857</carnum>
+    <brand>BENZ</brand>
+    <type>S500</type>
+    <yaer>14/04</yaer>
+    <cc>4.7</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>89.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BKE-3972</carnum>
+    <brand>FORD</brand>
+    <type>載卡多</type>
+    <yaer>08/06</yaer>
+    <cc>2.0 (貨廂.昇降機)</cc>
+    <c>2.0</c>
+    <state />
+    <source />
+    <op>6.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>KEL-8600</carnum>
+    <brand>TOYOTA</brand>
+    <type>HINO</type>
+    <yaer>11/08</yaer>
+    <cc>4.0 (柴.貨廂.視野輔助)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>59.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>8R-5940 (12/20試A8378)</carnum>
+    <brand>NISSAN</brand>
+    <type>MARCH</type>
+    <yaer>02/10</yaer>
+    <cc>1.3</cc>
+    <c>淺藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDJ-6028</carnum>
+    <brand>TOYOTA</brand>
+    <type>VIOS</type>
+    <yaer>21/10</yaer>
+    <cc>1.5</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>35.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>2779-D6</carnum>
+    <brand>LEXUS</brand>
+    <type>ES350</type>
+    <yaer>10/12</yaer>
+    <cc>3.5</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>19.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AMG-0538</carnum>
+    <brand>FORD</brand>
+    <type>FOCUS</type>
+    <yaer>14/12</yaer>
+    <cc>2.0 (柴)</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>16.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDJ-7760</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VERYCA</type>
+    <yaer>21/11</yaer>
+    <cc>1.5 (貨)</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>30.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BJB-3828</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS H.</type>
+    <yaer>21/02</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BKN-3670</carnum>
+    <brand>VW</brand>
+    <type>T-ROC</type>
+    <yaer>21/11</yaer>
+    <cc>1.5</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>66.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFB-7630</carnum>
+    <brand>VW</brand>
+    <type>T6</type>
+    <yaer>23/06</yaer>
+    <cc>2.0 (柴)</cc>
+    <c>棕</c>
+    <state />
+    <source />
+    <op>145.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCT-6158</carnum>
+    <brand>BENZ</brand>
+    <type>GT43</type>
+    <yaer>19/12</yaer>
+    <cc>3.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>279.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BEY-2535</carnum>
+    <brand>INFINITI</brand>
+    <type>Q70</type>
+    <yaer>18/03-19/12</yaer>
+    <cc>2.5</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>75.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDV-1730</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>23/12</yaer>
+    <cc>1.8</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>59.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>2260-JF</carnum>
+    <brand>NISSAN</brand>
+    <type>SENTRA</type>
+    <yaer>04/04</yaer>
+    <cc>1.8</cc>
+    <c>淺棕</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCW-2075</carnum>
+    <brand>HYUNDAI</brand>
+    <type>ELANTRA</type>
+    <yaer>20/07</yaer>
+    <cc>1.6</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>37.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BPD-1281</carnum>
+    <brand>FORD</brand>
+    <type>FOCUS</type>
+    <yaer>22/06</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDK-9659</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>ZINGER</type>
+    <yaer>21/12-22/01</yaer>
+    <cc>2.4</cc>
+    <c>深黃</c>
+    <state />
+    <source />
+    <op>28.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>EAE-1773</carnum>
+    <brand>VOLVO</brand>
+    <type>XC40</type>
+    <yaer>23/06</yaer>
+    <cc>408HP</cc>
+    <c>灰 黑</c>
+    <state />
+    <source />
+    <op>136.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AME-3699</carnum>
+    <brand>MAZDA</brand>
+    <type>CX-5</type>
+    <yaer>14/09</yaer>
+    <cc>2.2 (柴)</cc>
+    <c>深藍</c>
+    <state />
+    <source />
+    <op>19.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDH-9390</carnum>
+    <brand>HYUNDAI</brand>
+    <type>ELANTRA</type>
+    <yaer>21/09</yaer>
+    <cc>1.6</cc>
+    <c>深藍</c>
+    <state />
+    <source />
+    <op>41.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BYW-5021</carnum>
+    <brand>OPEL</brand>
+    <type>MOKKA</type>
+    <yaer>23/02</yaer>
+    <cc>1.2</cc>
+    <c>綠黑</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFE-3016</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>23/12</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>56.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BLW-1881</carnum>
+    <brand>HYUNDAI</brand>
+    <type>ELANTRA</type>
+    <yaer>21/04</yaer>
+    <cc>1.6</cc>
+    <c>深藍</c>
+    <state />
+    <source />
+    <op>47.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCZ-5762</carnum>
+    <brand>HYUNDAI</brand>
+    <type>PORTER</type>
+    <yaer>23/11</yaer>
+    <cc>2.5 (柴.貨框.昇降機)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>69.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFK-0026</carnum>
+    <brand>HYUNDAI</brand>
+    <type>PORTER</type>
+    <yaer>24/01</yaer>
+    <cc>2.5 (柴.貨框.昇降機)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>72.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RAS-9773</carnum>
+    <brand>HYUNDAI</brand>
+    <type>PORTER</type>
+    <yaer>23/11</yaer>
+    <cc>2.5 (柴.貨框.昇降機)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>70.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BDJ-5210</carnum>
+    <brand>MINI</brand>
+    <type>CLUBMAN</type>
+    <yaer>16/05</yaer>
+    <cc>2.0</cc>
+    <c>藍 銀</c>
+    <state />
+    <source />
+    <op>63.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>CCA-0975 (原:BLR-1938)</carnum>
+    <brand>LAND ROVER</brand>
+    <type>EVOQUE</type>
+    <yaer>17/03</yaer>
+    <cc>2.0</cc>
+    <c>紅</c>
+    <state />
+    <source />
+    <op>63.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BLE-9713</carnum>
+    <brand>NISSAN</brand>
+    <type>KICKS</type>
+    <yaer>22/01</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BDL-8709</carnum>
+    <brand>NISSAN</brand>
+    <type>JUKE</type>
+    <yaer>19/08</yaer>
+    <cc>1.6</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>41.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AWU-3063</carnum>
+    <brand>HYUNDAI</brand>
+    <type>TUCSON</type>
+    <yaer>09/04</yaer>
+    <cc>2.0 (柴)</cc>
+    <c>深灰</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>HBB-0581</carnum>
+    <brand>利鴻</brand>
+    <type>營業半拖車</type>
+    <yaer>21/02</yaer>
+    <cc>(弧形.傾卸式.框式)</cc>
+    <c>**</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BQA-6662</carnum>
+    <brand>LEXUS</brand>
+    <type>NX200</type>
+    <yaer>18/12-19/01</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>76.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>KPB-6778</carnum>
+    <brand>TOYOTA</brand>
+    <type>HINO</type>
+    <yaer>21/06</yaer>
+    <cc>4.0 (柴.貨框.昇降機.視野輔助)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>119.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BBP-0157</carnum>
+    <brand>VOLVO</brand>
+    <type>S90 H.</type>
+    <yaer>21/08</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>107.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BRZ-7765</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>23/01</yaer>
+    <cc>1.8</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>57.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BTZ-8531</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>20/01</yaer>
+    <cc>1.8</cc>
+    <c>淺藍</c>
+    <state />
+    <source />
+    <op>45.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDY-3112</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>ZINGER</type>
+    <yaer>20/01</yaer>
+    <cc>2.4</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFL-0036</carnum>
+    <brand>SUZUKI</brand>
+    <type>VITARA H.</type>
+    <yaer>23/05-24/03</yaer>
+    <cc>1.4</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>74.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BHC-5885</carnum>
+    <brand>HYUNDAI</brand>
+    <type>KONA H.</type>
+    <yaer>20/06</yaer>
+    <cc>1.6</cc>
+    <c>藍 黑</c>
+    <state />
+    <source />
+    <op>57.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BZH-1932 (原：BAG-7383)</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>ZINGER</type>
+    <yaer>19/04</yaer>
+    <cc>2.4</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>27.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BLD-5785</carnum>
+    <brand>HYUNDAI</brand>
+    <type>TUCSON</type>
+    <yaer>21/12</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>66.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AYB-3770</carnum>
+    <brand>LUXGEN</brand>
+    <type>U6</type>
+    <yaer>18/01</yaer>
+    <cc>1.8</cc>
+    <c>黑 白</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BRC-5578</carnum>
+    <brand>LEXUS</brand>
+    <type>ES200</type>
+    <yaer>15/11</yaer>
+    <cc>2.0</cc>
+    <c>白 黑</c>
+    <state />
+    <source />
+    <op>55.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>9636-UK</carnum>
+    <brand>BMW</brand>
+    <type>X3</type>
+    <yaer>07/10-08/01</yaer>
+    <cc>3.0</cc>
+    <c>深藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>ARL-7160</carnum>
+    <brand>HYUNDAI</brand>
+    <type>SANTAFE</type>
+    <yaer>16/11</yaer>
+    <cc>2.2 (柴)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>39.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDL-6125</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>ZINGER</type>
+    <yaer>22/03</yaer>
+    <cc>2.4</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>34.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BNS-7530</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VERYCA</type>
+    <yaer>23/03</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>42.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ACE-5212</carnum>
+    <brand>TOYOTA</brand>
+    <type>RAV4</type>
+    <yaer>13/07</yaer>
+    <cc>2.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BSW-8715</carnum>
+    <brand>FORD</brand>
+    <type>MUSTANG</type>
+    <yaer>20/02</yaer>
+    <cc>2.3</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>ALU-8998</carnum>
+    <brand>BMW</brand>
+    <type>X5</type>
+    <yaer>14/11</yaer>
+    <cc>3.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>59.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ANE-7080</carnum>
+    <brand>HYUNDAI</brand>
+    <type>IX35</type>
+    <yaer>15/05</yaer>
+    <cc>2.0 (柴)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>22.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BBW-7729</carnum>
+    <brand>BENZ</brand>
+    <type>GLE350D</type>
+    <yaer>19/12</yaer>
+    <cc>3.0 (柴)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>139.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCL-1982</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VERYCA</type>
+    <yaer>19/03</yaer>
+    <cc>1.5 (貨廂.置放架)</cc>
+    <c>黃</c>
+    <state />
+    <source />
+    <op>26.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDL-6129</carnum>
+    <brand>TOYOTA</brand>
+    <type>SIENTA</type>
+    <yaer>22/02</yaer>
+    <cc>1.8</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>45.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>5265-WM</carnum>
+    <brand>LEXUS</brand>
+    <type>ES330</type>
+    <yaer>05/09</yaer>
+    <cc>3.3</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>9.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BKZ-6132</carnum>
+    <brand>TOYOTA</brand>
+    <type>CROSS</type>
+    <yaer>24/03</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>71.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BYH-8701 (原:ALW-1620)</carnum>
+    <brand>FORD</brand>
+    <type>FOCUS</type>
+    <yaer>15/02</yaer>
+    <cc>2.0</cc>
+    <c>紅</c>
+    <state />
+    <source />
+    <op>14.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BLA-0670</carnum>
+    <brand>LUXGEN</brand>
+    <type>URX</type>
+    <yaer>21/07</yaer>
+    <cc>1.8</cc>
+    <c>深藍</c>
+    <state />
+    <source />
+    <op>33.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BCE-8127</carnum>
+    <brand>TOYOTA</brand>
+    <type>RAV4</type>
+    <yaer>19/07</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>55.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ARS-1220</carnum>
+    <brand>NISSAN</brand>
+    <type>TIIDA</type>
+    <yaer>16/02</yaer>
+    <cc>1.6</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>15.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BKM-0077</carnum>
+    <brand>AUDI</brand>
+    <type>A1</type>
+    <yaer>16/09</yaer>
+    <cc>1.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AKM-8818</carnum>
+    <brand>BMW</brand>
+    <type>535I GT</type>
+    <yaer>10/11</yaer>
+    <cc>3.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDD-5653</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VERYCA</type>
+    <yaer>21/03</yaer>
+    <cc>1.5 (貨)廂.置放架</cc>
+    <c>深黃</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFE-3977</carnum>
+    <brand>LEXUS</brand>
+    <type>UX200</type>
+    <yaer>19/08</yaer>
+    <cc>2.0</cc>
+    <c>淺棕</c>
+    <state />
+    <source />
+    <op>88.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BYD-3129</carnum>
+    <brand>AUDI</brand>
+    <type>Q3 H.</type>
+    <yaer>22/05</yaer>
+    <cc>1.5</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>119.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BYH-6983</carnum>
+    <brand>LAND ROVER</brand>
+    <type>DEFENDER</type>
+    <yaer>23/01-24/11</yaer>
+    <cc>5.0</cc>
+    <c>灰 黑</c>
+    <state />
+    <source />
+    <op>466.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BSG-8927</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALPHARD</type>
+    <yaer>19/09</yaer>
+    <cc>3.5</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>189.9	 A</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BQD-9232</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VERYCA</type>
+    <yaer>22/12</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>43.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ATK-1079</carnum>
+    <brand>HYUNDAI</brand>
+    <type>ELANTRA</type>
+    <yaer>17/06</yaer>
+    <cc>1.6</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BFG-1959</carnum>
+    <brand>SUBARU</brand>
+    <type>LEVORG</type>
+    <yaer>19/07-20/02</yaer>
+    <cc>2.0</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>AYE-9933</carnum>
+    <brand>TOYOTA</brand>
+    <type>WISH</type>
+    <yaer>15/10</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>37.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCU-2291</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>DELICA</type>
+    <yaer>20/02</yaer>
+    <cc>2.4 (貨框)</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>43.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCU-2902</carnum>
+    <brand>HYUNDAI</brand>
+    <type>ELANTRA</type>
+    <yaer>20/03</yaer>
+    <cc>1.6</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>32.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCW-7092</carnum>
+    <brand>HYUNDAI</brand>
+    <type>STAREX</type>
+    <yaer>20/07</yaer>
+    <cc>2.5 (柴)</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>78.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDD-7996</carnum>
+    <brand>FORD</brand>
+    <type>KUGA</type>
+    <yaer>21/03</yaer>
+    <cc>2.0</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>55.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDJ-0816</carnum>
+    <brand>LEXUS</brand>
+    <type>ES300H</type>
+    <yaer>21/09</yaer>
+    <cc>2.5</cc>
+    <c>淺棕</c>
+    <state />
+    <source />
+    <op>123.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDL-8506</carnum>
+    <brand>BMW</brand>
+    <type>220I</type>
+    <yaer>22/03</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>137.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BNG-1159</carnum>
+    <brand>NISSAN</brand>
+    <type>SENTRA</type>
+    <yaer>23/01</yaer>
+    <cc>1.6</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>58.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDH-3116</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>ZINGER</type>
+    <yaer>21/08</yaer>
+    <cc>2.4</cc>
+    <c>白 藍 黃</c>
+    <state />
+    <source />
+    <op>33.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AZP-6910</carnum>
+    <brand>NISSAN</brand>
+    <type>TIIDA</type>
+    <yaer>17/05</yaer>
+    <cc>1.6</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>18.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BVY-7590</carnum>
+    <brand>TOYOTA</brand>
+    <type>VIOS</type>
+    <yaer>23/09</yaer>
+    <cc>1.5</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>37.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDQ-5259</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS H.</type>
+    <yaer>22/04</yaer>
+    <cc>1.8</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>59.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AYD-0771</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>LANCER</type>
+    <yaer>19/10</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BTU-8372</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VERYCA</type>
+    <yaer>23/09</yaer>
+    <cc>1.5 (貨)</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>39.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>4519-Q3</carnum>
+    <brand>TOYOTA</brand>
+    <type>RAV4</type>
+    <yaer>12/06</yaer>
+    <cc>2.4</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>22.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AKE-7936</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>ZINGER</type>
+    <yaer>18/06</yaer>
+    <cc>2.4</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>17.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BMY-7785</carnum>
+    <brand>BENZ</brand>
+    <type>C300</type>
+    <yaer>17/03</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>109.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AJD-6518</carnum>
+    <brand>HONDA</brand>
+    <type>CR-V</type>
+    <yaer>14/10</yaer>
+    <cc>2.4</cc>
+    <c>深棕</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDQ-5351</carnum>
+    <brand>FORD</brand>
+    <type>FOCUS</type>
+    <yaer>22/04</yaer>
+    <cc>1.5</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>34.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AVF-9528</carnum>
+    <brand>BMW</brand>
+    <type>X5</type>
+    <yaer>16/09-17/02</yaer>
+    <cc>2.0 (柴)</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>55.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AYP-0606</carnum>
+    <brand>NISSAN</brand>
+    <type>SENTRA</type>
+    <yaer>17/05</yaer>
+    <cc>1.8</cc>
+    <c>黑 白</c>
+    <state />
+    <source />
+    <op>23.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BKG-2307</carnum>
+    <brand>SUZUKI</brand>
+    <type>SX4 H.</type>
+    <yaer>22/11-23/06</yaer>
+    <cc>1.4 (4WD)</cc>
+    <c>紅</c>
+    <state />
+    <source />
+    <op>78.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFL-5509</carnum>
+    <brand>SUZUKI</brand>
+    <type>SX4 H.</type>
+    <yaer>23/09-24/09</yaer>
+    <cc>1.4 (4WD)</cc>
+    <c>紅</c>
+    <state />
+    <source />
+    <op>83.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCV-1910</carnum>
+    <brand>HYUNDAI</brand>
+    <type>ELANTRA</type>
+    <yaer>20/04</yaer>
+    <cc>1.6</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>37.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDE-1915</carnum>
+    <brand>TOYOTA</brand>
+    <type>CROSS</type>
+    <yaer>21/04</yaer>
+    <cc>1.8</cc>
+    <c>淺藍</c>
+    <state />
+    <source />
+    <op>51.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDE-6727</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>21/05</yaer>
+    <cc>1.8</cc>
+    <c>淺藍</c>
+    <state />
+    <source />
+    <op>45.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCV-5508</carnum>
+    <brand>BENZ</brand>
+    <type>GLC200 H.</type>
+    <yaer>20/04</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>135.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFL-1890</carnum>
+    <brand>BENZ</brand>
+    <type>VITO</type>
+    <yaer>24/06</yaer>
+    <cc>2.0 (柴)</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>192.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BCA-9893</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>19/09</yaer>
+    <cc>1.8</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>40.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BKR-6678</carnum>
+    <brand>TOYOTA</brand>
+    <type>CROSS</type>
+    <yaer>21/03</yaer>
+    <cc>1.8</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>61.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ANX-2726</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VERYCA</type>
+    <yaer>16/01</yaer>
+    <cc>1.3(貨框)</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>22.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BEW-1317</carnum>
+    <brand>HYUNDAI</brand>
+    <type>ELANTRA</type>
+    <yaer>20/01</yaer>
+    <cc>1.6</cc>
+    <c>紅</c>
+    <state />
+    <source />
+    <op>39.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BEU-0053</carnum>
+    <brand>NISSAN</brand>
+    <type>X-TRAIL</type>
+    <yaer>20/03</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFL-0993</carnum>
+    <brand>BENZ</brand>
+    <type>VITO</type>
+    <yaer>24/05</yaer>
+    <cc>2.0 (柴)</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>186.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCZ-6318</carnum>
+    <brand>TOYOTA</brand>
+    <type>CAMRY H.</type>
+    <yaer>21/10</yaer>
+    <cc>2.5</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>79.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDQ-6528</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>CANTER</type>
+    <yaer>22/04</yaer>
+    <cc>3.0 (柴.貨框.視野輔助)</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>99.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFL-8877</carnum>
+    <brand>TOYOTA</brand>
+    <type>CAMRY H.</type>
+    <yaer>21/08</yaer>
+    <cc>2.5</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>79.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDT-6769</carnum>
+    <brand>MINI</brand>
+    <type>CLUBMAN</type>
+    <yaer>22/08</yaer>
+    <cc>2.0</cc>
+    <c>紅 黑</c>
+    <state />
+    <source />
+    <op>97.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ALG-3317</carnum>
+    <brand>FORD</brand>
+    <type>FOCUS</type>
+    <yaer>14/10</yaer>
+    <cc>1.6</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BAZ-3999</carnum>
+    <brand>INFINITI</brand>
+    <type>QX50</type>
+    <yaer>18/09</yaer>
+    <cc>2.0</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>79.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BJH-2879</carnum>
+    <brand>TOYOTA</brand>
+    <type>C-HR</type>
+    <yaer>21/04</yaer>
+    <cc>1.2</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>66.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BQA-9129</carnum>
+    <brand>VW</brand>
+    <type>GOLF</type>
+    <yaer>21/02</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>129.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BKP-5619</carnum>
+    <brand>TOYOTA</brand>
+    <type>TOWN ACE</type>
+    <yaer>22/09</yaer>
+    <cc>1.5 (貨篷)</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>39.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AZQ-3122</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>ZINGER</type>
+    <yaer>18/06</yaer>
+    <cc>2.4</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>25.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BLP-2779</carnum>
+    <brand>KIA</brand>
+    <type>卡旺</type>
+    <yaer>21/10</yaer>
+    <cc>2.5 (柴.貨框)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDQ-6830</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>DELICA</type>
+    <yaer>22/05</yaer>
+    <cc>2.4</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>49.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCY-9065</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>DELICA</type>
+    <yaer>22/06</yaer>
+    <cc>2.4 (貨. 冷凍廂)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>38.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BPC-7316</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>LANCER</type>
+    <yaer>22/05</yaer>
+    <cc>1.8</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCZ-7557</carnum>
+    <brand>TOYOTA</brand>
+    <type>CROSS</type>
+    <yaer>22/02</yaer>
+    <cc>1.8</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>54.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFD-2215</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VERYCA</type>
+    <yaer>23/10</yaer>
+    <cc>1.5 (貨框)</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>44.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCF-7506</carnum>
+    <brand>LEXUS</brand>
+    <type>ES200</type>
+    <yaer>17/04</yaer>
+    <cc>2.0</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>65.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AHU-6278</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>OUTLANDER</type>
+    <yaer>14/12</yaer>
+    <cc>2.4</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>16.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RBV-2751</carnum>
+    <brand>HONDA</brand>
+    <type>FIT</type>
+    <yaer>22/01</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>48.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BUL-5992</carnum>
+    <brand>HYUNDAI</brand>
+    <type>CUSTIN</type>
+    <yaer>24/01</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>116.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BAM-5050</carnum>
+    <brand>VW</brand>
+    <type>TIGUAN</type>
+    <yaer>19/11</yaer>
+    <cc>1.4</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>49.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AJA-3897</carnum>
+    <brand>HYUNDAI</brand>
+    <type>SANTAFE</type>
+    <yaer>14/06</yaer>
+    <cc>2.2(柴)</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>19.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BDK-0016</carnum>
+    <brand>KIA</brand>
+    <type>PICANTO</type>
+    <yaer>19/08-20/01</yaer>
+    <cc>1248</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>35.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ASP-6000</carnum>
+    <brand>INFINITI</brand>
+    <type>QX60</type>
+    <yaer>15/03</yaer>
+    <cc>3.5</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>39.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDH-6850</carnum>
+    <brand>LEXUS</brand>
+    <type>UX250H</type>
+    <yaer>21/08</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>99.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BMU-9292</carnum>
+    <brand>TOYOTA</brand>
+    <type>VIOS</type>
+    <yaer>22/03</yaer>
+    <cc>1.5</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ALE-9215</carnum>
+    <brand>NISSAN</brand>
+    <type>TIIDA</type>
+    <yaer>16/09</yaer>
+    <cc>1.6</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>14.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BXZ-5919</carnum>
+    <brand>VW</brand>
+    <type>T-ROC</type>
+    <yaer>21/08</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>79.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDQ-7029</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>22/05</yaer>
+    <cc>1.8</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>48.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDS-0302</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>ZINGER</type>
+    <yaer>22/05</yaer>
+    <cc>2.4</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>28.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDJ-0187</carnum>
+    <brand>HYUNDAI</brand>
+    <type>VENUE</type>
+    <yaer>21/09</yaer>
+    <cc>1.6</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>43.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDC-2936</carnum>
+    <brand>HYUNDAI</brand>
+    <type>TUCSON</type>
+    <yaer>21/01</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>49.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AQR-6093</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>ZINGER</type>
+    <yaer>10/12</yaer>
+    <cc>2.4</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>9.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BZZ-3503</carnum>
+    <brand>NISSAN</brand>
+    <type>SENTRA</type>
+    <yaer>23/04</yaer>
+    <cc>1.6</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>62.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDS-2338</carnum>
+    <brand>TOYOTA</brand>
+    <type>CROSS H.</type>
+    <yaer>22/05</yaer>
+    <cc>1.8</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>55.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>KER-3708</carnum>
+    <brand>TOYOTA</brand>
+    <type>HINO</type>
+    <yaer>24/08</yaer>
+    <cc>4.0 (柴.貨框.視野輔助)</cc>
+    <c>白 藍 </c>
+    <state />
+    <source />
+    <op>183</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ARH-9329</carnum>
+    <brand>TOYOTA</brand>
+    <type>YARIS</type>
+    <yaer>16/07</yaer>
+    <cc>1.5</cc>
+    <c>紅</c>
+    <state />
+    <source />
+    <op>23.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AJW-3281</carnum>
+    <brand>TOYOTA</brand>
+    <type>VIOS</type>
+    <yaer>15/05</yaer>
+    <cc>1.5</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>21.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFD-6259</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>22/04</yaer>
+    <cc>1.8</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>46.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BQD-3571</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VERYCA</type>
+    <yaer>22/10</yaer>
+    <cc>1.5(貨篷)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>39.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDN-0196</carnum>
+    <brand>TOYOTA</brand>
+    <type>VIOS</type>
+    <yaer>22/08</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>46.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AQV-0255</carnum>
+    <brand>NISSAN</brand>
+    <type>X-TRAIL</type>
+    <yaer>16/07</yaer>
+    <cc>2.0</cc>
+    <c>深灰</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFK-9225</carnum>
+    <brand>HYUNDAI</brand>
+    <type>STARIA</type>
+    <yaer>24/01</yaer>
+    <cc>2.2(柴.廂式)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>129.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BRY-5006</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>COLT+</type>
+    <yaer>22/07</yaer>
+    <cc>1.5</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>32.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BQD-7990</carnum>
+    <brand>NISSAN</brand>
+    <type>LIVINA</type>
+    <yaer>13/09</yaer>
+    <cc>1.8</cc>
+    <c>深灰</c>
+    <state />
+    <source />
+    <op>18.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDN-6896</carnum>
+    <brand>CITROEN</brand>
+    <type>BERLINGO</type>
+    <yaer>23/06</yaer>
+    <cc>1.5 (柴.貨廂)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>85.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BQP-5227</carnum>
+    <brand>FORD</brand>
+    <type>KUGA</type>
+    <yaer>22/04</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>71.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BSF-3706</carnum>
+    <brand>MAZDA</brand>
+    <type>MAZDA 3</type>
+    <yaer>23/11-24/01</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>74.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BEC-7227</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS H.</type>
+    <yaer>20/08</yaer>
+    <cc>1.8</cc>
+    <c>淺藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>REC-1132</carnum>
+    <brand>VOLVO</brand>
+    <type>XC40</type>
+    <yaer>23/10</yaer>
+    <cc>408HP</cc>
+    <c>灰 黑</c>
+    <state />
+    <source />
+    <op>130.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>CCA-0181</carnum>
+    <brand>LEXUS</brand>
+    <type>RX450H</type>
+    <yaer>22/03</yaer>
+    <cc>3.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>179.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AUR-3170</carnum>
+    <brand>NISSAN</brand>
+    <type>X-TRAIL</type>
+    <yaer>17/01</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>39.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AJR-0755</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>OUTLANDER</type>
+    <yaer>14/07</yaer>
+    <cc>2.4</cc>
+    <c>深灰</c>
+    <state />
+    <source />
+    <op>19.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BJD-7600</carnum>
+    <brand>HYUNDAI</brand>
+    <type>SANTAFE</type>
+    <yaer>20/07-21/01</yaer>
+    <cc>2.2 (柴)</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>86.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>4520-XJ</carnum>
+    <brand>HYUNDAI</brand>
+    <type>MATRIX</type>
+    <yaer>03/10</yaer>
+    <cc>1.8</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>ASB-6923</carnum>
+    <brand>MAZDA</brand>
+    <type>MAZDA 3</type>
+    <yaer>16/12</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFK-0021</carnum>
+    <brand>HYUNDAI</brand>
+    <type>PORTER</type>
+    <yaer>24/01</yaer>
+    <cc>2.5 (柴.貨框.昇降機)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>67.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BLZ-7979</carnum>
+    <brand>HONDA</brand>
+    <type>CR-V</type>
+    <yaer>21/01</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BPJ-0611</carnum>
+    <brand>LUXGEN</brand>
+    <type>U6</type>
+    <yaer>22/01</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>AMY-9105</carnum>
+    <brand>MAZDA</brand>
+    <type>MAZDA 5</type>
+    <yaer>15/07</yaer>
+    <cc>2.0</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFL-5395</carnum>
+    <brand>SUZUKI</brand>
+    <type>VITARA H.</type>
+    <yaer>23/09-24/09</yaer>
+    <cc>1.4 (4WD)</cc>
+    <c>紅 黑</c>
+    <state />
+    <source />
+    <op>79.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AXP-8266</carnum>
+    <brand>BMW</brand>
+    <type>X3</type>
+    <yaer>20/07</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>82.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDN-7703</carnum>
+    <brand>OPEL</brand>
+    <type>MOKKA</type>
+    <yaer>23/11</yaer>
+    <cc>1.2</cc>
+    <c>白 黑</c>
+    <state />
+    <source />
+    <op>63.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFD-2057</carnum>
+    <brand>OPEL</brand>
+    <type>MOKKA</type>
+    <yaer>23/10</yaer>
+    <cc>1.2</cc>
+    <c>白 黑</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BUC-9338</carnum>
+    <brand>AUDI</brand>
+    <type>Q5 H.</type>
+    <yaer>22/06</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>136.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BMV-3700</carnum>
+    <brand>TOYOTA</brand>
+    <type>VIOS</type>
+    <yaer>21/05</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>36.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BKB-8333</carnum>
+    <brand>NISSAN</brand>
+    <type>SENTRA</type>
+    <yaer>21/04</yaer>
+    <cc>1.6</cc>
+    <c>黑 白</c>
+    <state />
+    <source />
+    <op>59.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AGR-0789</carnum>
+    <brand>BMW</brand>
+    <type>320GT</type>
+    <yaer>14/04</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>41.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RBK-0260</carnum>
+    <brand>HYUNDAI</brand>
+    <type>STAREX</type>
+    <yaer>19/01</yaer>
+    <cc>2.5 (柴)</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>57.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AUG-9822</carnum>
+    <brand>NISSAN</brand>
+    <type>MARCH</type>
+    <yaer>17/11</yaer>
+    <cc>1.5</cc>
+    <c>深紅</c>
+    <state />
+    <source />
+    <op>25.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BQA-9655</carnum>
+    <brand>LEXUS</brand>
+    <type>ES200</type>
+    <yaer>17/12</yaer>
+    <cc>2.0</cc>
+    <c>淺棕</c>
+    <state />
+    <source />
+    <op>67.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BTB-1891</carnum>
+    <brand>LAND ROVER</brand>
+    <type>VELAR</type>
+    <yaer>18/05</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BMR-6929</carnum>
+    <brand>FORD</brand>
+    <type>KUGA</type>
+    <yaer>22/01</yaer>
+    <cc>1.5</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>CCA-2635</carnum>
+    <brand>OPEL</brand>
+    <type>MOKKA</type>
+    <yaer>23/02</yaer>
+    <cc>1.2</cc>
+    <c>綠 黑</c>
+    <state />
+    <source />
+    <op>59.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BNC-8295</carnum>
+    <brand>BENZ</brand>
+    <type>V250D</type>
+    <yaer>21/10-22/01</yaer>
+    <cc>2.0(柴)</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>153.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BMQ-1856</carnum>
+    <brand>BMW</brand>
+    <type>420I</type>
+    <yaer>15/07</yaer>
+    <cc>2.0</cc>
+    <c>白 黑</c>
+    <state />
+    <source />
+    <op>65.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDS-5513</carnum>
+    <brand>HYUNDAI</brand>
+    <type>VENUE</type>
+    <yaer>22/06</yaer>
+    <cc>1.6</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>54.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCF-9861</carnum>
+    <brand>HYUNDAI</brand>
+    <type>KONA H.</type>
+    <yaer>20/03</yaer>
+    <cc>1.6</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>50.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDJ-2190</carnum>
+    <brand>HYUNDAI</brand>
+    <type>VENUE</type>
+    <yaer>21/10</yaer>
+    <cc>1.6</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>37.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCX-2591</carnum>
+    <brand>HYUNDAI</brand>
+    <type>KONA H.</type>
+    <yaer>20/04</yaer>
+    <cc>1.6</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>49.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDF-3076</carnum>
+    <brand>HYUNDAI</brand>
+    <type>TUCSON</type>
+    <yaer>21/06</yaer>
+    <cc>2.0</cc>
+    <c>淺藍</c>
+    <state />
+    <source />
+    <op>45.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDC-0351</carnum>
+    <brand>HYUNDAI</brand>
+    <type>KONA H.</type>
+    <yaer>20/04</yaer>
+    <cc>1.6</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>54.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDQ-0337</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>DELICA</type>
+    <yaer>22/03</yaer>
+    <cc>2.4</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>46.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ARD-3380</carnum>
+    <brand>HYUNDAI</brand>
+    <type>SANTAFE</type>
+    <yaer>16/10</yaer>
+    <cc>2.2(柴)</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>33.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BJU-7180</carnum>
+    <brand>HYUNDAI</brand>
+    <type>PORTER</type>
+    <yaer>13/09</yaer>
+    <cc>2.5 (柴.篷式)</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BCN-5869</carnum>
+    <brand>VW</brand>
+    <type>POLO</type>
+    <yaer>19/04</yaer>
+    <cc>1.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>35.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BUD-0106</carnum>
+    <brand>MINI</brand>
+    <type>COOPER</type>
+    <yaer>16/07</yaer>
+    <cc>2.0</cc>
+    <c>藍 白</c>
+    <state />
+    <source />
+    <op>45.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RBV-3060</carnum>
+    <brand>HYUNDAI</brand>
+    <type>STAREX</type>
+    <yaer>21/03</yaer>
+    <cc>2.5 (柴)</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>68.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RBV-3021</carnum>
+    <brand>HYUNDAI</brand>
+    <type>STAREX</type>
+    <yaer>21/03</yaer>
+    <cc>2.5 (柴)</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>69.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ASW-7711</carnum>
+    <brand>AUDI</brand>
+    <type>Q3</type>
+    <yaer>16/11-17/02</yaer>
+    <cc>1.4</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BQR-6235</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>OUTLANDER</type>
+    <yaer>22/07</yaer>
+    <cc>2.4</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>58.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BLX-2659</carnum>
+    <brand>LAND ROVER</brand>
+    <type>DISCOVERY SPORT</type>
+    <yaer>21/06</yaer>
+    <cc>2.0 (油電)</cc>
+    <c>白 黑</c>
+    <state />
+    <source />
+    <op>98.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BJB-8590</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VERYCA</type>
+    <yaer>21/04</yaer>
+    <cc>1.5(貨.框式)</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>31.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>3583-Q8</carnum>
+    <brand>BENZ</brand>
+    <type>E250</type>
+    <yaer>11/09</yaer>
+    <cc>1.8</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>34.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RBV-2373</carnum>
+    <brand>HYUNDAI</brand>
+    <type>STAREX</type>
+    <yaer>21/11</yaer>
+    <cc>2.5 (柴)</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>81.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RBV-3039</carnum>
+    <brand>HYUNDAI</brand>
+    <type>STAREX</type>
+    <yaer>21/03</yaer>
+    <cc>2.5 (柴)</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>67.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>CCA-6271 (原:ANU-6010)</carnum>
+    <brand>FORD</brand>
+    <type>KUGA</type>
+    <yaer>16/03</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>35.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>CCA-5250 (原:BED-0395)</carnum>
+    <brand>KIA</brand>
+    <type>PICANTO</type>
+    <yaer>20/10</yaer>
+    <cc>1248</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>33.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ATT-8126</carnum>
+    <brand>TOYOTA</brand>
+    <type>VIOS</type>
+    <yaer>16/11-17/04</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFL-5951</carnum>
+    <brand>MAZDA</brand>
+    <type>CX-60 H.</type>
+    <yaer>24/10</yaer>
+    <cc>3.3</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BBE-7226</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>19/04</yaer>
+    <cc>1.8</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>45.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BYJ-5731</carnum>
+    <brand>TOYOTA</brand>
+    <type>VIOS</type>
+    <yaer>22/07</yaer>
+    <cc>1.5</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCX-9588</carnum>
+    <brand>LEXUS</brand>
+    <type>RX300</type>
+    <yaer>22/06</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>129.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AHW-5213</carnum>
+    <brand>MAZDA</brand>
+    <type>MAZDA 5</type>
+    <yaer>14/06</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>21.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFM-9152</carnum>
+    <brand>MAZDA</brand>
+    <type>CX-60</type>
+    <yaer>24/10</yaer>
+    <cc>2.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>98.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BVZ-2175</carnum>
+    <brand>TOYOTA</brand>
+    <type>TOWN ACE</type>
+    <yaer>24/12</yaer>
+    <cc>1.5(貨框.昇降機)</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>41.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BTN-6799</carnum>
+    <brand>LAND ROVER</brand>
+    <type>DISCOVERY SPORT</type>
+    <yaer>22/12-23/02</yaer>
+    <cc>2.0 (油電)</cc>
+    <c>棕 黑</c>
+    <state />
+    <source />
+    <op>89.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AVF-9361</carnum>
+    <brand>FORD</brand>
+    <type>KUGA</type>
+    <yaer>15/01</yaer>
+    <cc>1.6</cc>
+    <c>綠</c>
+    <state />
+    <source />
+    <op>23.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BFK-8810</carnum>
+    <brand>HONDA</brand>
+    <type>HR-V</type>
+    <yaer>20/07</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>43.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ACG-9591</carnum>
+    <brand>SUZUKI</brand>
+    <type>SWIFT</type>
+    <yaer>13/09</yaer>
+    <cc>1.2</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>21.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>4530-D7</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>CANTER</type>
+    <yaer>92/09</yaer>
+    <cc>2.7(柴.貨框)</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>AVL-5572</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>DELICA</type>
+    <yaer>17/06</yaer>
+    <cc>2.4</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFD-1129</carnum>
+    <brand>TOYOTA</brand>
+    <type>TOWN ACE</type>
+    <yaer>23/10</yaer>
+    <cc>1.5 (貨篷)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>41,9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BSR-3168</carnum>
+    <brand>AUDI</brand>
+    <type>Q3 H.</type>
+    <yaer>22/10</yaer>
+    <cc>1.5</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>105.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>CCA- (原:RDS-0808)</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>DELICA</type>
+    <yaer>22/05</yaer>
+    <cc>2.4(貨框.高空作業)</cc>
+    <c>黃</c>
+    <state />
+    <source />
+    <op>45.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BRZ-9298</carnum>
+    <brand>TOYOTA</brand>
+    <type>YARIS</type>
+    <yaer>17/04</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BSW-9315</carnum>
+    <brand>MAZDA</brand>
+    <type>MAZDA 3</type>
+    <yaer>19/06</yaer>
+    <cc>2.0</cc>
+    <c>深紅</c>
+    <state />
+    <source />
+    <op>59.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BHF-3103</carnum>
+    <brand>NISSAN</brand>
+    <type>X-TRAIL</type>
+    <yaer>20/09</yaer>
+    <cc>2.0</cc>
+    <c>深紅</c>
+    <state />
+    <source />
+    <op>48.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BBK-3899</carnum>
+    <brand>LEXUS</brand>
+    <type>UX200</type>
+    <yaer>19/07</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>85.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AUE-0363</carnum>
+    <brand>HYUNDAI</brand>
+    <type>ELANTRA</type>
+    <yaer>17/06</yaer>
+    <cc>2.0</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BPC-0290</carnum>
+    <brand>FORD</brand>
+    <type>KUGA</type>
+    <yaer>22/04</yaer>
+    <cc>2.0</cc>
+    <c>紅</c>
+    <state />
+    <source />
+    <op>59.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AWQ-5995</carnum>
+    <brand>HYUNDAI</brand>
+    <type>TUCSON</type>
+    <yaer>17/10</yaer>
+    <cc>1.6</cc>
+    <c>深紅</c>
+    <state />
+    <source />
+    <op>35.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BDS-7872</carnum>
+    <brand>TOYOTA</brand>
+    <type>RAV4</type>
+    <yaer>19/11</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>65.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCQ-9109</carnum>
+    <brand>TOYOTA</brand>
+    <type>CAMRY H.</type>
+    <yaer>23/10</yaer>
+    <cc>2.5</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>82.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDH-3870</carnum>
+    <brand>TOYOTA</brand>
+    <type>SIENTA</type>
+    <yaer>21/08</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>39.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCW-5922</carnum>
+    <brand>TOYOTA</brand>
+    <type>SIENTA</type>
+    <yaer>20/07</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>35.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDK-2926</carnum>
+    <brand>TOYOTA</brand>
+    <type>SIENTA</type>
+    <yaer>21/12</yaer>
+    <cc>1.8</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>37.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDT-6173</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VERYCA</type>
+    <yaer>22/08</yaer>
+    <cc>1.5</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>45.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCN-8970</carnum>
+    <brand>PORSCHE</brand>
+    <type>MACAN</type>
+    <yaer>18/12-19/08</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>99.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDD-5605</carnum>
+    <brand>TOYOTA</brand>
+    <type>CAMRY H.</type>
+    <yaer>21/03</yaer>
+    <cc>2.5</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>74.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDF-8560</carnum>
+    <brand>HYUNDAI</brand>
+    <type>TUCSON</type>
+    <yaer>21/07</yaer>
+    <cc>1.6</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>47.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDA-0927</carnum>
+    <brand>HYUNDAI</brand>
+    <type>TUCSON</type>
+    <yaer>20/08</yaer>
+    <cc>1.6</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>51.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDF-9197</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>ZINGER</type>
+    <yaer>21/07</yaer>
+    <cc>2.4</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>27.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDH-0950</carnum>
+    <brand>HYUNDAI</brand>
+    <type>SANTAFE</type>
+    <yaer>19/11</yaer>
+    <cc>2.4</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>53.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCW-5973</carnum>
+    <brand>HYUNDAI</brand>
+    <type>TUCSON</type>
+    <yaer>20/07</yaer>
+    <cc>1.6</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>52.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDF-9625</carnum>
+    <brand>TOYOTA</brand>
+    <type>RAV4 H.</type>
+    <yaer>21/07</yaer>
+    <cc>2.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>77.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDW-0089</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>ZINGER</type>
+    <yaer>22/08</yaer>
+    <cc>2.4</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>27.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BMX-9097</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VERYCA</type>
+    <yaer>22/07</yaer>
+    <cc>1.5(貨廂)</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>CCA-6190 (原:BHV-8259)</carnum>
+    <brand>NISSAN</brand>
+    <type>X-TRAIL</type>
+    <yaer>20/06</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>41.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BFA-1507</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>DELICA</type>
+    <yaer>20/06</yaer>
+    <cc>2.4</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>35.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BFD-0930</carnum>
+    <brand>PORSCHE</brand>
+    <type>CAYENNE</type>
+    <yaer>20/06</yaer>
+    <cc>3.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>159.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>CCA-6352 (原:BNX-2071)</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>VERYCA</type>
+    <yaer>24/10</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>48.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BRG-8333</carnum>
+    <brand>HYUNDAI</brand>
+    <type>VENUE</type>
+    <yaer>22/10</yaer>
+    <cc>1.6</cc>
+    <c>黑 白</c>
+    <state />
+    <source />
+    <op>55.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AMK-1728</carnum>
+    <brand>SUZUKI</brand>
+    <type>SWIFT</type>
+    <yaer>15/01</yaer>
+    <cc>1242</cc>
+    <c>紅</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCW-6577</carnum>
+    <brand>TOYOTA</brand>
+    <type>CAMRY</type>
+    <yaer>20/07</yaer>
+    <cc>2.5</cc>
+    <c>紅</c>
+    <state />
+    <source />
+    <op>55.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>7005-NU</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>06/07</yaer>
+    <cc>1.8</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>9.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BUC-2632</carnum>
+    <brand>KIA</brand>
+    <type>PICANTO</type>
+    <yaer>23/08</yaer>
+    <cc>1.2</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>53.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BUA-7087</carnum>
+    <brand>HYUNDAI</brand>
+    <type>VERNA</type>
+    <yaer>16/11</yaer>
+    <cc>1.6</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>14.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDZ-7665</carnum>
+    <brand>NISSAN</brand>
+    <type>KICKS</type>
+    <yaer>23/04</yaer>
+    <cc>1.6</cc>
+    <c>白 藍</c>
+    <state />
+    <source />
+    <op>55.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BQC-2537</carnum>
+    <brand>TOYOTA</brand>
+    <type>YARIS</type>
+    <yaer>18/10</yaer>
+    <cc>1.5</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>33.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ATP-2811</carnum>
+    <brand>HYUNDAI</brand>
+    <type>TUCSON</type>
+    <yaer>17/06</yaer>
+    <cc>1.6</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BKW-0373</carnum>
+    <brand>TOYOTA</brand>
+    <type>CROSS</type>
+    <yaer>22/12-23/01</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BRD-5815</carnum>
+    <brand>TOYOTA</brand>
+    <type>TOWN ACE</type>
+    <yaer>22/04</yaer>
+    <cc>1.5 (貨篷)</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>31.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BMF-6873</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS H.</type>
+    <yaer>22/06</yaer>
+    <cc>1.8</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BXM-1897</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>DELICA</type>
+    <yaer>24/11</yaer>
+    <cc>2.4 (貨框)</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>48.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BMC-6762</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>17/07</yaer>
+    <cc>1.8</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BFJ-8915</carnum>
+    <brand>NISSAN</brand>
+    <type>LIVINA</type>
+    <yaer>20/01</yaer>
+    <cc>1.6</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>26.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BWN-0093</carnum>
+    <brand>FORD</brand>
+    <type>KUGA</type>
+    <yaer>24/06</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>69.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BDE-1829</carnum>
+    <brand>TOYOTA</brand>
+    <type>VIOS</type>
+    <yaer>18/11-19/01</yaer>
+    <cc>1.5</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>28.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCY-7006</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>CANTER</type>
+    <yaer>21/11</yaer>
+    <cc>3.0 (柴.貨 硬頂篷式.昇降機)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>99.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BTK-7172</carnum>
+    <brand>HONDA</brand>
+    <type>CR-V</type>
+    <yaer>17/08</yaer>
+    <cc>1.5</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>49.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFC-0168</carnum>
+    <brand>VOLVO</brand>
+    <type>S90 H.</type>
+    <yaer>22/06-23/07</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>109.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BAF-7773</carnum>
+    <brand>HYUNDAI</brand>
+    <type>ELANTRA</type>
+    <yaer>18/12</yaer>
+    <cc>1.6</cc>
+    <c>紅</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RBR-1960</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALPHARD</type>
+    <yaer>17/07</yaer>
+    <cc>3.5</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>127.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFS-1531</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS H.</type>
+    <yaer>25/02</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>65.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCZ-7029</carnum>
+    <brand>TOYOTA</brand>
+    <type>CROSS</type>
+    <yaer>22/02</yaer>
+    <cc>1.8</cc>
+    <c>淺藍</c>
+    <state />
+    <source />
+    <op>57.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BRH-3191</carnum>
+    <brand>FORD</brand>
+    <type>MONDEO H.</type>
+    <yaer>22/10</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>73.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BDN-0792</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>16/06</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>AUM-1709</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>LANCER</type>
+    <yaer>17/06</yaer>
+    <cc>1.8</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>20.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AAZ-2626</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>COLT+</type>
+    <yaer>13/02</yaer>
+    <cc>1.6</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>15.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDA-0019</carnum>
+    <brand>TOYOTA</brand>
+    <type>CAMRY H.</type>
+    <yaer>20/07</yaer>
+    <cc>2.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>69.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BDX-7277</carnum>
+    <brand>TOYOTA</brand>
+    <type>RAV4</type>
+    <yaer>15/01</yaer>
+    <cc>2.5</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>25.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BKG-7562</carnum>
+    <brand>LEXUS</brand>
+    <type>ES250</type>
+    <yaer>23/08</yaer>
+    <cc>2.5</cc>
+    <c>淺棕</c>
+    <state />
+    <source />
+    <op>138.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BDA-1782</carnum>
+    <brand>MITSUBISHI</brand>
+    <type>DELICA</type>
+    <yaer>18/11</yaer>
+    <cc>2.4 (貨篷)</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op>29.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BLN-5226</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>21/06</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BQQ-7536</carnum>
+    <brand>TOYOTA</brand>
+    <type>CROSS</type>
+    <yaer>22/06</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>57.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BES-8292</carnum>
+    <brand>TOYOTA</brand>
+    <type>VIOS</type>
+    <yaer>20/02</yaer>
+    <cc>1.5</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BRR-7373</carnum>
+    <brand>TOYOTA</brand>
+    <type>CROSS</type>
+    <yaer>22/11</yaer>
+    <cc>1.8</cc>
+    <c>淺藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>3176-NQ</carnum>
+    <brand>MAZDA</brand>
+    <type>MAZDA 5</type>
+    <yaer>06/01</yaer>
+    <cc>2.0</cc>
+    <c>淺棕</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BAX-5220</carnum>
+    <brand>TOYOTA</brand>
+    <type>SIENTA</type>
+    <yaer>18/09</yaer>
+    <cc>1.8</cc>
+    <c>紅</c>
+    <state />
+    <source />
+    <op>39.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AZA-2730</carnum>
+    <brand>NISSAN</brand>
+    <type>LIVINA</type>
+    <yaer>18/06</yaer>
+    <cc>1.6</cc>
+    <c>深藍</c>
+    <state />
+    <source />
+    <op>26.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AXT-6275</carnum>
+    <brand>TOYOTA</brand>
+    <type>CROSS</type>
+    <yaer>21/11</yaer>
+    <cc>1.8</cc>
+    <c>紅</c>
+    <state />
+    <source />
+    <op>47.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>CBG-7800</carnum>
+    <brand>TOYOTA</brand>
+    <type>YARIS CROSS</type>
+    <yaer>24/07</yaer>
+    <cc>1.5</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op>59.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BAB-1039</carnum>
+    <brand>TOYOTA</brand>
+    <type>SIENTA</type>
+    <yaer>20/05</yaer>
+    <cc>1.8</cc>
+    <c>綠</c>
+    <state />
+    <source />
+    <op>46.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AYL-3681</carnum>
+    <brand>FORD</brand>
+    <type>ESCORT</type>
+    <yaer>18/08</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>23.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>1658-ZR</carnum>
+    <brand>NISSAN</brand>
+    <type>TIIDA</type>
+    <yaer>10/待確認</yaer>
+    <cc>1.8</cc>
+    <c>深藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCW-8093</carnum>
+    <brand>TOYOTA</brand>
+    <type>PRIUS C.</type>
+    <yaer>20/08</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>33.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BYW-5681</carnum>
+    <brand>HYUNDAI</brand>
+    <type>CUSTIN</type>
+    <yaer>23/07</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>106.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RBF-9272</carnum>
+    <brand>TOYOTA</brand>
+    <type>CAMRY</type>
+    <yaer>24/09</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>89.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>ARA-3730</carnum>
+    <brand>VW</brand>
+    <type>POLO</type>
+    <yaer>15/07-16/01</yaer>
+    <cc>1.6</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BUT-2983</carnum>
+    <brand>FORD</brand>
+    <type>FOCUS</type>
+    <yaer>22/07</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BSZ-5806</carnum>
+    <brand>TOYOTA</brand>
+    <type>CROSS</type>
+    <yaer>22/12</yaer>
+    <cc>1.8</cc>
+    <c>灰</c>
+    <state />
+    <source />
+    <op>56.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AVM-5207</carnum>
+    <brand>NISSAN</brand>
+    <type>LIVINA</type>
+    <yaer>17/04</yaer>
+    <cc>1.6</cc>
+    <c>深藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BJJ-3325</carnum>
+    <brand>NISSAN</brand>
+    <type>X-TRAIL</type>
+    <yaer>21/08</yaer>
+    <cc>2.0</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RCW-8367</carnum>
+    <brand>TOYOTA</brand>
+    <type>PRIUS C.</type>
+    <yaer>20/08</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op>27.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AGK-7671</carnum>
+    <brand>VW</brand>
+    <type>GOLF</type>
+    <yaer>14/06</yaer>
+    <cc>1.2</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BDK-9086</carnum>
+    <brand>NISSAN</brand>
+    <type>KICKS</type>
+    <yaer>20/05</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BLC-7232</carnum>
+    <brand>SUBARU</brand>
+    <type>FORESTER</type>
+    <yaer>21/10</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>4596-QA</carnum>
+    <brand>TOYOTA</brand>
+    <type>VIOS</type>
+    <yaer>06/10</yaer>
+    <cc>1.5</cc>
+    <c>銀</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFC-5399</carnum>
+    <brand>TOYOTA</brand>
+    <type>CAMRY H.</type>
+    <yaer>20/06</yaer>
+    <cc>2.5</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>67.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BGS-7787</carnum>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <yaer>20/08</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>6279-UG</carnum>
+    <brand>ISUZU</brand>
+    <type>ELF</type>
+    <yaer>07/06</yaer>
+    <cc>3.0 (柴.框式)</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BBP-9601</carnum>
+    <brand>MAZDA</brand>
+    <type>CX-5</type>
+    <yaer>21/09</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BMR-6239</carnum>
+    <brand>TOYOTA</brand>
+    <type>YARIS</type>
+    <yaer>22/02</yaer>
+    <cc>1.5</cc>
+    <c>紅</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BTC-0552</carnum>
+    <brand>TOYOTA</brand>
+    <type>YARIS</type>
+    <yaer>22/12-23/01</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFC-0723</carnum>
+    <brand>FORD</brand>
+    <type>KUGA</type>
+    <yaer>21/08</yaer>
+    <cc>1.5</cc>
+    <c>藍</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>AAA-9556</carnum>
+    <brand>BMW</brand>
+    <type>520D GT</type>
+    <yaer>12/12</yaer>
+    <cc>2.0 (柴)</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BNC-8983</carnum>
+    <brand>VW</brand>
+    <type>T-ROC</type>
+    <yaer>22/05</yaer>
+    <cc>1.5</cc>
+    <c>藍 黑</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BQA-8361</carnum>
+    <brand>NISSAN</brand>
+    <type>TIIDA</type>
+    <yaer>15/01</yaer>
+    <cc>1.6</cc>
+    <c>深紅</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BJK-2510</carnum>
+    <brand>LUXGEN</brand>
+    <type>U6</type>
+    <yaer>18/07</yaer>
+    <cc>1.8</cc>
+    <c>灰 深紫</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>BRZ-9516</carnum>
+    <brand>NISSAN</brand>
+    <type>VERITA</type>
+    <yaer>03/07</yaer>
+    <cc>1.3</cc>
+    <c>白 黃</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>CAQ-8392</carnum>
+    <brand>TOYOTA</brand>
+    <type>RAV4</type>
+    <yaer>24/02</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <state />
+    <source />
+    <op>83.9</op>
+  </CAR-P>
+</CAR>
