@@ -55,11 +55,22 @@
     <div class="container mx-auto p-8 bg-white rounded-xl shadow-lg border border-gray-200">
         <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">XML 轉表格</h1>
         <p class="text-center text-gray-600 mb-8">
-            網頁載入後，資料已自動從指定網址載入。您也可以點擊下方按鈕重新整理表格。
+            網頁載入後，資料已自動從指定網址載入。您也可以透過下方的選單和搜尋欄位進行篩選。
         </p>
 
         <div class="flex flex-col items-center space-y-4">
-            <button id="loadUrlButton" class="bg-indigo-600 text-white font-semibold py-2 px-8 rounded-full hover:bg-indigo-700 transition-colors">重新載入資料</button>
+            <!-- 搜尋文字方塊 -->
+            <input type="text" id="carnumSearchInput" placeholder="輸入車號關鍵字..." class="w-full sm:w-1/2 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+            
+            <!-- 篩選下拉式選單 -->
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full justify-center mt-4">
+                <select id="brandSelect" class="w-full sm:w-1/2 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                    <option value="">請選擇品牌</option>
+                </select>
+                <select id="typeSelect" class="w-full sm:w-1/2 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" disabled>
+                    <option value="">請選擇車型</option>
+                </select>
+            </div>
 
             <div id="loadingIndicator" class="hidden text-center text-indigo-600 font-semibold">
                 <div class="flex items-center justify-center space-x-2">
@@ -84,7 +95,9 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const loadUrlButton = document.getElementById('loadUrlButton');
+            const carnumSearchInput = document.getElementById('carnumSearchInput');
+            const brandSelect = document.getElementById('brandSelect');
+            const typeSelect = document.getElementById('typeSelect');
             const tableContainer = document.getElementById('tableContainer');
             const loadingIndicator = document.getElementById('loadingIndicator');
             const errorBox = document.getElementById('errorBox');
@@ -92,6 +105,7 @@
 
             // XML 檔案的固定網址
             const xmlUrl = "https://raw.githubusercontent.com/den3315x-tai/price/refs/heads/main/CAR-P.xml";
+            let allCarData = []; // 用來儲存所有車輛資料
 
             // 欄位名稱對應
             const fieldNames = {
@@ -107,14 +121,27 @@
             // 網頁載入後立即呼叫載入函數
             handleUrlLoad();
             
-            // 點擊按鈕時也可以再次載入
-            loadUrlButton.addEventListener('click', handleUrlLoad);
+            // 當品牌選單改變時，更新車型選單和表格
+            brandSelect.addEventListener('change', () => {
+                populateTypeDropdown(brandSelect.value);
+                updateTableDisplay();
+            });
+
+            // 當車型選單改變時，更新表格
+            typeSelect.addEventListener('change', () => {
+                updateTableDisplay();
+            });
+
+            // 當車號搜尋欄位改變時，更新表格
+            carnumSearchInput.addEventListener('input', () => {
+                updateTableDisplay();
+            });
 
             async function handleUrlLoad() {
                 showLoading();
                 hideError();
                 clearTable();
-
+                
                 try {
                     const response = await fetch(xmlUrl);
                     if (!response.ok) {
@@ -124,15 +151,15 @@
                     const parser = new DOMParser();
                     const xmlDoc = parser.parseFromString(xmlString, "application/xml");
 
-                    // 檢查解析錯誤
                     if (xmlDoc.getElementsByTagName("parsererror").length > 0) {
                         throw new Error("無效的 XML 檔案格式。");
                     }
 
-                    // 嘗試尋找並解析 XML 內容
-                    const data = parseXml(xmlDoc);
-                    if (data.length > 0) {
-                        createTable(data);
+                    allCarData = parseXml(xmlDoc);
+
+                    if (allCarData.length > 0) {
+                        populateBrandDropdown(allCarData);
+                        updateTableDisplay();
                     } else {
                         showError("XML 檔案中未找到可轉換為表格的資料。");
                     }
@@ -146,29 +173,18 @@
 
             function parseXml(xmlDoc) {
                 const records = [];
-                // 專門尋找並解析 <CAR-P> 標籤
                 const items = xmlDoc.getElementsByTagName('CAR-P');
-
                 if (items.length === 0) {
                     return records;
                 }
-
                 for (let i = 0; i < items.length; i++) {
                     const item = items[i];
                     const record = {};
-
-                    // 取得子元素 carnum, brand, type, yaer, cc, c, state, source, op 的內容
                     const fields = ['carnum', 'brand', 'type', 'yaer', 'cc', 'c', 'op'];
-                    
                     fields.forEach(field => {
                         const childElement = item.getElementsByTagName(field)[0];
-                        if (childElement && childElement.textContent !== null) {
-                            record[field] = childElement.textContent;
-                        } else {
-                            record[field] = ''; // 如果找不到，給一個空字串
-                        }
+                        record[field] = (childElement && childElement.textContent !== null) ? childElement.textContent : '';
                     });
-
                     if (Object.keys(record).length > 0) {
                         records.push(record);
                     }
@@ -176,11 +192,65 @@
                 return records;
             }
 
+            function populateBrandDropdown(data) {
+                const brands = [...new Set(data.map(item => item.brand))].sort();
+                brandSelect.innerHTML = '<option value="">請選擇品牌</option>';
+                brands.forEach(brand => {
+                    const option = document.createElement('option');
+                    option.value = brand;
+                    option.textContent = brand;
+                    brandSelect.appendChild(option);
+                });
+                brandSelect.disabled = false;
+                populateTypeDropdown(''); // 預設清空車型選單
+            }
+
+            function populateTypeDropdown(selectedBrand) {
+                typeSelect.innerHTML = '<option value="">請選擇車型</option>';
+                typeSelect.disabled = true;
+
+                if (selectedBrand) {
+                    const filteredData = allCarData.filter(item => item.brand === selectedBrand);
+                    const types = [...new Set(filteredData.map(item => item.type))].sort();
+                    types.forEach(type => {
+                        const option = document.createElement('option');
+                        option.value = type;
+                        option.textContent = type;
+                        typeSelect.appendChild(option);
+                    });
+                    typeSelect.disabled = false;
+                }
+            }
+
+            function updateTableDisplay() {
+                const selectedBrand = brandSelect.value;
+                const selectedType = typeSelect.value;
+                const carnumSearchTerm = carnumSearchInput.value.toLowerCase();
+                
+                let filteredData = allCarData;
+
+                if (selectedBrand) {
+                    filteredData = filteredData.filter(item => item.brand === selectedBrand);
+                }
+                if (selectedType) {
+                    filteredData = filteredData.filter(item => item.type === selectedType);
+                }
+                if (carnumSearchTerm) {
+                    filteredData = filteredData.filter(item => item.carnum.toLowerCase().includes(carnumSearchTerm));
+                }
+
+                createTable(filteredData);
+            }
+
             function createTable(data) {
-                if (data.length === 0) return;
+                if (data.length === 0) {
+                    tableContainer.innerHTML = '<p class="text-center text-gray-500">沒有符合條件的資料。</p>';
+                    return;
+                }
 
                 const table = document.createElement('table');
                 table.className = "min-w-full divide-y divide-gray-200 border border-gray-200 rounded-lg table-responsive";
+                tableContainer.innerHTML = ''; // 清空內容
                 tableContainer.appendChild(table);
 
                 // 建立表頭
@@ -192,7 +262,6 @@
                     const th = document.createElement('th');
                     th.scope = "col";
                     th.className = "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-50";
-                    // 使用 fieldNames 對應表來顯示中文名稱
                     th.textContent = fieldNames[headerText] || headerText;
                     headerRow.appendChild(th);
                 });
@@ -205,7 +274,6 @@
                         const cell = row.insertCell();
                         cell.className = "px-6 py-4 whitespace-nowrap text-sm text-gray-800";
                         cell.textContent = rowData[header];
-                        // 為手機版添加 data-label
                         cell.setAttribute('data-label', fieldNames[header] || header);
                     });
                 });
