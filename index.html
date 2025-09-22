@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML 轉表格</title>
+    <!-- 載入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .container {
+            max-width: 900px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="container mx-auto p-8 bg-white rounded-xl shadow-lg border border-gray-200">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">XML 轉表格</h1>
+        <p class="text-center text-gray-600 mb-8">
+            請輸入 XML 檔案的網址，網頁會將其內容轉換並以表格形式顯示。
+        </p>
+
+        <div class="flex flex-col items-center space-y-4">
+            <div class="flex w-full max-w-md">
+                <input type="text" id="xmlUrlInput" placeholder="請貼上 XML 檔案網址" class="flex-grow rounded-l-full border border-gray-300 py-2 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <button id="loadUrlButton" class="bg-indigo-600 text-white font-semibold py-2 px-6 rounded-r-full hover:bg-indigo-700 transition-colors">載入</button>
+            </div>
+
+            <div id="loadingIndicator" class="hidden text-center text-indigo-600 font-semibold">
+                <div class="flex items-center justify-center space-x-2">
+                    <svg class="animate-spin h-5 w-5 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>正在載入...</span>
+                </div>
+            </div>
+
+            <div id="errorBox" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-md w-full" role="alert">
+                <p id="errorMessage" class="font-bold"></p>
+            </div>
+        </div>
+
+        <div id="tableContainer" class="mt-8 overflow-x-auto">
+            <!-- XML 表格將動態生成於此 -->
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const xmlUrlInput = document.getElementById('xmlUrlInput');
+            const loadUrlButton = document.getElementById('loadUrlButton');
+            const tableContainer = document.getElementById('tableContainer');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const errorBox = document.getElementById('errorBox');
+            const errorMessage = document.getElementById('errorMessage');
+
+            loadUrlButton.addEventListener('click', handleUrlLoad);
+
+            async function handleUrlLoad() {
+                const url = xmlUrlInput.value.trim();
+                if (!url) {
+                    showError("請輸入一個有效的網址。");
+                    return;
+                }
+
+                showLoading();
+                hideError();
+                clearTable();
+
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`HTTP 錯誤! 狀態碼: ${response.status}`);
+                    }
+                    const xmlString = await response.text();
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+
+                    // 檢查解析錯誤
+                    if (xmlDoc.getElementsByTagName("parsererror").length > 0) {
+                        throw new Error("無效的 XML 檔案格式。");
+                    }
+
+                    // 嘗試尋找並解析 XML 內容
+                    const data = parseXml(xmlDoc);
+                    if (data.length > 0) {
+                        createTable(data);
+                    } else {
+                        showError("XML 檔案中未找到可轉換為表格的資料。");
+                    }
+
+                } catch (error) {
+                    showError("處理檔案時發生錯誤：" + error.message);
+                } finally {
+                    hideLoading();
+                }
+            }
+
+            function parseXml(xmlDoc) {
+                const records = [];
+                // 專門尋找並解析 <CAR-P> 標籤
+                const items = xmlDoc.getElementsByTagName('CAR-P');
+
+                if (items.length === 0) {
+                    return records;
+                }
+
+                for (let i = 0; i < items.length; i++) {
+                    const item = items[i];
+                    const record = {};
+
+                    // 取得子元素 carnum, brand, type, yaer, cc, c, state, source, op 的內容
+                    const fields = ['carnum', 'brand', 'type', 'yaer', 'cc', 'c', 'state', 'source', 'op'];
+                    
+                    fields.forEach(field => {
+                        const childElement = item.getElementsByTagName(field)[0];
+                        if (childElement && childElement.textContent !== null) {
+                            record[field] = childElement.textContent;
+                        } else {
+                            record[field] = ''; // 如果找不到，給一個空字串
+                        }
+                    });
+
+                    if (Object.keys(record).length > 0) {
+                        records.push(record);
+                    }
+                }
+                return records;
+            }
+
+            function createTable(data) {
+                if (data.length === 0) return;
+
+                const table = document.createElement('table');
+                table.className = "min-w-full divide-y divide-gray-200 border border-gray-200 rounded-lg";
+                tableContainer.appendChild(table);
+
+                // 建立表頭
+                const thead = table.createTHead();
+                const headerRow = thead.insertRow();
+                const headers = Object.keys(data[0]);
+
+                headers.forEach(headerText => {
+                    const th = document.createElement('th');
+                    th.scope = "col";
+                    th.className = "px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-50";
+                    th.textContent = headerText;
+                    headerRow.appendChild(th);
+                });
+
+                // 建立表格內容
+                const tbody = table.createTBody();
+                data.forEach(rowData => {
+                    const row = tbody.insertRow();
+                    headers.forEach(header => {
+                        const cell = row.insertCell();
+                        cell.className = "px-6 py-4 whitespace-nowrap text-sm text-gray-800";
+                        cell.textContent = rowData[header];
+                    });
+                });
+            }
+
+            function clearTable() {
+                tableContainer.innerHTML = '';
+            }
+
+            function showLoading() {
+                loadingIndicator.classList.remove('hidden');
+            }
+
+            function hideLoading() {
+                loadingIndicator.classList.add('hidden');
+            }
+
+            function showError(message) {
+                errorMessage.textContent = message;
+                errorBox.classList.remove('hidden');
+            }
+
+            function hideError() {
+                errorBox.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
