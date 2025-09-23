@@ -264,9 +264,6 @@
             cc: '排氣量',
             c: '顏色',
             op: '售價'
-            sl: '車況', // 新增欄位
-            note: '車況備註', // 新增欄位
-            ticket: 'F' // 新增欄位
         };
 
         brandSelect.addEventListener('change', () => {
@@ -325,7 +322,7 @@
             for (let i = 0; i < items.length; i++) {
                 const item = items[i];
                 const record = {};
-                const fields = ['carnum', 'brand', 'type', 'yaer', 'cc', 'c', 'op', 'sl', 'note', 'ticket'];
+                const fields = ['carnum', 'brand', 'type', 'yaer', 'cc', 'c', 'op'];
                 fields.forEach(field => {
                     const childElement = item.getElementsByTagName(field)[0];
                     record[field] = (childElement && childElement.textContent !== null) ? childElement.textContent : '';
@@ -445,4 +442,3 @@
     </script>
 </body>
 </html>
-
