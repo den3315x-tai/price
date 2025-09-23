@@ -417,7 +417,14 @@
                 const row = tbody.insertRow();
                 headers.forEach(header => {
                     const cell = row.insertCell();
-                    cell.className = "px-6 py-4 whitespace-nowrap text-sm text-gray-800";
+                    
+                    // 根據欄位名稱應用不同的樣式
+                    let cellClass = "px-6 py-4 whitespace-nowrap text-sm text-gray-800";
+                    if (['op', 'sl', 'note'].includes(header)) {
+                        cellClass = "px-6 py-4 whitespace-nowrap text-base font-semibold text-red-500";
+                    }
+
+                    cell.className = cellClass;
                     cell.textContent = rowData[header] || 'N/A'; // 如果沒有資料則顯示 N/A
                     cell.setAttribute('data-label', fieldNames[header] || header);
                 });
