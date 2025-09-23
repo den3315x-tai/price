@@ -3070,17 +3070,6 @@
     <op>37.9</op>
   </CAR-P>
   <CAR-P>
-    <carnum>RDT-6173</carnum>
-    <brand>MITSUBISHI</brand>
-    <type>VERYCA</type>
-    <yaer>22/08</yaer>
-    <cc>1.5</cc>
-    <c>銀</c>
-    <state />
-    <source />
-    <op>45.9</op>
-  </CAR-P>
-  <CAR-P>
     <carnum>RCN-8970</carnum>
     <brand>PORSCHE</brand>
     <type>MACAN</type>
@@ -3983,17 +3972,6 @@
     <op />
   </CAR-P>
   <CAR-P>
-    <carnum>BRZ-9516</carnum>
-    <brand>NISSAN</brand>
-    <type>VERITA</type>
-    <yaer>03/07</yaer>
-    <cc>1.3</cc>
-    <c>白 黃</c>
-    <state />
-    <source />
-    <op />
-  </CAR-P>
-  <CAR-P>
     <carnum>CAQ-8392</carnum>
     <brand>TOYOTA</brand>
     <type>RAV4</type>
@@ -4003,5 +3981,27 @@
     <state />
     <source />
     <op>83.9</op>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RDL-7770</carnum>
+    <brand>TOYOTA</brand>
+    <type>CAMRY</type>
+    <yaer>22/02</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <state />
+    <source />
+    <op />
+  </CAR-P>
+  <CAR-P>
+    <carnum>ARW-1795</carnum>
+    <brand>SUZUKI</brand>
+    <type>SWIFT</type>
+    <yaer>16/08</yaer>
+    <cc>1242</cc>
+    <c>深棕 白</c>
+    <state />
+    <source />
+    <op />
   </CAR-P>
 </CAR>
