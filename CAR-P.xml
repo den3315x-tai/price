@@ -475,8 +475,8 @@
     <brand>VOLVO</brand>
     <type>V60</type>
     <op>69.9</op>
-    <sl>A</sl>
-    <note />
+    <sl>B</sl>
+    <note>換左右前葉</note>
     <ticket>F</ticket>
   </CAR-P>
   <CAR-P>
@@ -1656,18 +1656,6 @@
     <ticket>F</ticket>
   </CAR-P>
   <CAR-P>
-    <carnum>AYP-0606</carnum>
-    <yaer>17/05</yaer>
-    <cc>1.8</cc>
-    <c>黑 白</c>
-    <brand>NISSAN</brand>
-    <type>SENTRA</type>
-    <op>23.9</op>
-    <sl>A</sl>
-    <note />
-    <ticket>F</ticket>
-  </CAR-P>
-  <CAR-P>
     <carnum>BKG-2307</carnum>
     <yaer>22/11-23/06</yaer>
     <cc>1.4 (4WD)</cc>
@@ -2616,6 +2604,18 @@
     <ticket>F</ticket>
   </CAR-P>
   <CAR-P>
+    <carnum>BMQ-9937</carnum>
+    <yaer>15/12</yaer>
+    <cc>2.1 (柴)</cc>
+    <c>銀</c>
+    <brand>BENZ</brand>
+    <type>V250D</type>
+    <op>79.9</op>
+    <sl>a</sl>
+    <note>15-6</note>
+    <ticket>F</ticket>
+  </CAR-P>
+  <CAR-P>
     <carnum>BMV-3700</carnum>
     <yaer>21/05</yaer>
     <cc>1.5</cc>
@@ -2854,18 +2854,6 @@
     <sl />
     <note />
     <ticket />
-  </CAR-P>
-  <CAR-P>
-    <carnum>BCN-5869</carnum>
-    <yaer>19/04</yaer>
-    <cc>1.0</cc>
-    <c>白</c>
-    <brand>VW</brand>
-    <type>POLO</type>
-    <op>35.9</op>
-    <sl>A</sl>
-    <note />
-    <ticket>F</ticket>
   </CAR-P>
   <CAR-P>
     <carnum>BUD-0106</carnum>
@@ -3120,18 +3108,6 @@
     <ticket>F</ticket>
   </CAR-P>
   <CAR-P>
-    <carnum>AVF-9361</carnum>
-    <yaer>15/01</yaer>
-    <cc>1.6</cc>
-    <c>綠</c>
-    <brand>FORD</brand>
-    <type>KUGA</type>
-    <op>23.9</op>
-    <sl />
-    <note />
-    <ticket />
-  </CAR-P>
-  <CAR-P>
     <carnum>BFK-8810</carnum>
     <yaer>20/07</yaer>
     <cc>1.8</cc>
@@ -3333,18 +3309,6 @@
     <op>39.9</op>
     <sl>a</sl>
     <note>電滑</note>
-    <ticket>F</ticket>
-  </CAR-P>
-  <CAR-P>
-    <carnum>RCW-5922</carnum>
-    <yaer>20/07</yaer>
-    <cc>1.8</cc>
-    <c>白</c>
-    <brand>TOYOTA</brand>
-    <type>SIENTA</type>
-    <op>35.9</op>
-    <sl>a</sl>
-    <note>7座</note>
     <ticket>F</ticket>
   </CAR-P>
   <CAR-P>
@@ -3836,7 +3800,7 @@
     <type>LANCER</type>
     <op>20.9</op>
     <sl>B</sl>
-    <note>IKEY</note>
+    <note>IKEY 右後門</note>
     <ticket>F</ticket>
   </CAR-P>
   <CAR-P>
@@ -4033,7 +3997,7 @@
   </CAR-P>
   <CAR-P>
     <carnum>1658-ZR</carnum>
-    <yaer>10/待確認</yaer>
+    <yaer>10/09</yaer>
     <cc>1.8</cc>
     <c>深藍</c>
     <brand>NISSAN</brand>
@@ -4242,9 +4206,9 @@
     <c>黑</c>
     <brand>MAZDA</brand>
     <type>CX-5</type>
-    <op />
-    <sl />
-    <note />
+    <op>65.9</op>
+    <sl>A</sl>
+    <note>黑艷旗艦版</note>
     <ticket>F</ticket>
   </CAR-P>
   <CAR-P>
@@ -4302,9 +4266,9 @@
     <c>藍 黑</c>
     <brand>VW</brand>
     <type>T-ROC</type>
-    <op />
-    <sl />
-    <note />
+    <op>72.9</op>
+    <sl>A</sl>
+    <note>剛做完保養</note>
     <ticket>F</ticket>
   </CAR-P>
   <CAR-P>
@@ -4314,8 +4278,8 @@
     <c>深紅</c>
     <brand>NISSAN</brand>
     <type>TIIDA</type>
-    <op />
-    <sl />
+    <op>19.9</op>
+    <sl>A</sl>
     <note />
     <ticket>F</ticket>
   </CAR-P>
@@ -4348,6 +4312,126 @@
     <yaer>16/08</yaer>
     <cc>1242</cc>
     <c>深棕 白</c>
+    <brand>SUZUKI</brand>
+    <type>SWIFT</type>
+    <op />
+    <sl />
+    <note />
+    <ticket>F</ticket>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BDJ-7263</carnum>
+    <yaer>19/05</yaer>
+    <cc>1.0</cc>
+    <c>紅</c>
+    <brand>SUZUKI</brand>
+    <type>SWIFT</type>
+    <op />
+    <sl />
+    <note />
+    <ticket>F</ticket>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BGX-1318</carnum>
+    <yaer>21/09</yaer>
+    <cc>2.4 (貨框)</cc>
+    <c>灰</c>
+    <brand>MITSUBISHI</brand>
+    <type>ZINGER皮卡</type>
+    <op />
+    <sl />
+    <note />
+    <ticket>F</ticket>
+  </CAR-P>
+  <CAR-P>
+    <carnum>APW-6991</carnum>
+    <yaer>16/02</yaer>
+    <cc>1.8</cc>
+    <c>白</c>
+    <brand>TOYOTA</brand>
+    <type>ALTIS</type>
+    <op />
+    <sl />
+    <note />
+    <ticket>F</ticket>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BCV-2585</carnum>
+    <yaer>19/09</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <brand>TOYOTA</brand>
+    <type>YARIS</type>
+    <op />
+    <sl />
+    <note />
+    <ticket>F</ticket>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BRT-8023</carnum>
+    <yaer>23/04</yaer>
+    <cc>1.6</cc>
+    <c>深紅</c>
+    <brand>NISSAN</brand>
+    <type>KICKS</type>
+    <op />
+    <sl />
+    <note />
+    <ticket>F</ticket>
+  </CAR-P>
+  <CAR-P>
+    <carnum>RFS-0985</carnum>
+    <yaer>25/01</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
+    <brand>HONDA</brand>
+    <type>FIT H.</type>
+    <op />
+    <sl />
+    <note />
+    <ticket>F</ticket>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BAW-7382</carnum>
+    <yaer>18/11-19/01</yaer>
+    <cc>1248</cc>
+    <c>銀</c>
+    <brand>KIA</brand>
+    <type>PICANTO</type>
+    <op />
+    <sl />
+    <note />
+    <ticket>F</ticket>
+  </CAR-P>
+  <CAR-P>
+    <carnum>BTR-8958</carnum>
+    <yaer>22/08-23/06</yaer>
+    <cc>2.0</cc>
+    <c>白</c>
+    <brand>NISSAN</brand>
+    <type>ALTIMA</type>
+    <op />
+    <sl />
+    <note />
+    <ticket>F</ticket>
+  </CAR-P>
+  <CAR-P>
+    <carnum>AYH-1211</carnum>
+    <yaer>17/07</yaer>
+    <cc>2.0</cc>
+    <c>黑</c>
+    <brand>VOLVO</brand>
+    <type>S60</type>
+    <op />
+    <sl />
+    <note />
+    <ticket>F</ticket>
+  </CAR-P>
+  <CAR-P>
+    <carnum>1611-SE</carnum>
+    <yaer>06/12</yaer>
+    <cc>1.5</cc>
+    <c>白</c>
     <brand>SUZUKI</brand>
     <type>SWIFT</type>
     <op />
