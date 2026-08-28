@@ -73,11 +73,27 @@ const dom = {
   resultSummary: document.querySelector("#resultSummary"),
   mobileResults: document.querySelector("#mobileResults"),
   tableBody: document.querySelector("#tableBody"),
+  reserveModal: document.querySelector("#reserveModal"),
+  reserveForm: document.querySelector("#reserveForm"),
+  reserveClose: document.querySelector("#reserveClose"),
+  reserveCancel: document.querySelector("#reserveCancel"),
+  reserveConfirm: document.querySelector("#reserveConfirm"),
+  reserveStatus: document.querySelector("#reserveStatus"),
+  reserveBusiness: document.querySelector("#reserveBusiness"),
+  reserveYear: document.querySelector("#reserveYear"),
+  reserveModel: document.querySelector("#reserveModel"),
+  reserveColor: document.querySelector("#reserveColor"),
+  reservePlate: document.querySelector("#reservePlate"),
+  reserveAmount: document.querySelector("#reserveAmount"),
+  reserveLoan: document.querySelector("#reserveLoan"),
+  reserveTrade: document.querySelector("#reserveTrade"),
+  reserveNote: document.querySelector("#reserveNote"),
 };
 
 const state = {
   rows: [],
   filteredRows: [],
+  selectedReserveRow: null,
   filters: {
     plate: "",
     brand: "",
@@ -159,6 +175,24 @@ function bindEvents() {
     setStatus(`資料已載入，共 ${state.rows.length} 筆，請選擇品牌與車型或輸入車號後查詢。`);
     renderResults();
   });
+
+  document.addEventListener("click", (event) => {
+    const reserveButton = event.target.closest(".reserve-button");
+    if (reserveButton) {
+      event.preventDefault();
+      event.stopPropagation();
+      openReserveModal(Number(reserveButton.dataset.reserveIndex));
+      return;
+    }
+
+    if (event.target === dom.reserveModal) {
+      closeReserveModal();
+    }
+  });
+
+  dom.reserveClose.addEventListener("click", closeReserveModal);
+  dom.reserveCancel.addEventListener("click", closeReserveModal);
+  dom.reserveForm.addEventListener("submit", submitReserveForm);
 }
 
 function clearDropdownFilters() {
@@ -472,7 +506,7 @@ function renderResults() {
   if (!state.hasSearched) {
     dom.resultSummary.textContent = "尚未查詢";
     dom.mobileResults.innerHTML = '<div class="empty-state">請先選擇品牌與車型，或直接輸入車號關鍵字後查詢。</div>';
-    dom.tableBody.innerHTML = '<tr><td colspan="15">請先選擇品牌與車型，或直接輸入車號關鍵字後查詢。</td></tr>';
+    dom.tableBody.innerHTML = '<tr><td colspan="16">請先選擇品牌與車型，或直接輸入車號關鍵字後查詢。</td></tr>';
     return;
   }
 
@@ -480,7 +514,7 @@ function renderResults() {
 
   if (state.filteredRows.length === 0) {
     dom.mobileResults.innerHTML = '<div class="empty-state">查無符合條件的車輛資料</div>';
-    dom.tableBody.innerHTML = '<tr><td colspan="15">查無符合條件的車輛資料</td></tr>';
+    dom.tableBody.innerHTML = '<tr><td colspan="16">查無符合條件的車輛資料</td></tr>';
     return;
   }
 
@@ -488,7 +522,7 @@ function renderResults() {
   dom.tableBody.innerHTML = state.filteredRows.map(renderTableRow).join("");
 }
 
-function renderMobileCard(row) {
+function renderMobileCard(row, index) {
   return `
     <details class="result-card">
       <summary class="result-card__summary">
@@ -501,9 +535,96 @@ function renderMobileCard(row) {
         <div class="result-card__grid">
           ${CARD_DETAIL_FIELDS.map((field) => renderMetaItem(field, row[field], field === "車況備注")).join("")}
         </div>
+        <button class="reserve-button reserve-button--card" type="button" data-reserve-index="${index}">收訂</button>
       </div>
     </details>
   `;
+}
+
+function openReserveModal(index) {
+  const row = state.filteredRows[index];
+  if (!row) {
+    return;
+  }
+
+  state.selectedReserveRow = row;
+  dom.reserveForm.reset();
+  dom.reserveStatus.textContent = "";
+  dom.reserveBusiness.value = "";
+  dom.reserveYear.value = row.年份 || "-";
+  dom.reserveModel.value = row.車型 || "-";
+  dom.reserveColor.value = row.顏色 || "-";
+  dom.reservePlate.value = row.車號 || "-";
+  dom.reserveModal.hidden = false;
+  dom.reserveBusiness.focus();
+}
+
+function closeReserveModal() {
+  dom.reserveModal.hidden = true;
+  state.selectedReserveRow = null;
+  dom.reserveStatus.textContent = "";
+  dom.reserveConfirm.disabled = false;
+}
+
+async function submitReserveForm(event) {
+  event.preventDefault();
+
+  if (!state.selectedReserveRow) {
+    return;
+  }
+
+  const reserve = {
+    業務: dom.reserveBusiness.value.trim(),
+    收定: dom.reserveAmount.value.trim(),
+    貸款: dom.reserveLoan.value.trim(),
+    換車: dom.reserveTrade.value.trim(),
+    備註: dom.reserveNote.value.trim(),
+  };
+
+  if (!reserve.業務) {
+    dom.reserveStatus.textContent = "請輸入業務。";
+    dom.reserveBusiness.focus();
+    return;
+  }
+
+  if (!reserve.收定) {
+    dom.reserveStatus.textContent = "請輸入收定金額。";
+    dom.reserveAmount.focus();
+    return;
+  }
+
+  const vehicle = {
+    ...state.selectedReserveRow,
+    業務: reserve.業務,
+    收定: reserve.收定,
+    貸款: reserve.貸款,
+    換車: reserve.換車,
+    備註: reserve.備註,
+  };
+
+  dom.reserveConfirm.disabled = true;
+  dom.reserveStatus.textContent = "收訂通知送出中...";
+
+  try {
+    await fetch(API_CONFIG.apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",
+      },
+      body: JSON.stringify({
+        action: "reserve",
+        vehicle,
+        reserve,
+      }),
+    });
+
+    dom.reserveStatus.textContent = "已送出收訂通知。";
+    window.setTimeout(closeReserveModal, 900);
+  } catch (error) {
+    console.error(error);
+    dom.reserveStatus.textContent = "送出失敗，請稍後再試。";
+    dom.reserveConfirm.disabled = false;
+  }
 }
 
 function vehicleColorStyle(color) {
@@ -567,10 +688,11 @@ function renderMetaItem(label, value, isFull) {
   `;
 }
 
-function renderTableRow(row) {
+function renderTableRow(row, index) {
   return `
     <tr>
       ${FIELD_ORDER.map((field) => `<td class="${statusClass(field, row[field])}">${renderTableCell(field, row[field])}</td>`).join("")}
+      <td><button class="reserve-button reserve-button--table" type="button" data-reserve-index="${index}">收訂</button></td>
     </tr>
   `;
 }
