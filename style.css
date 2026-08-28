@@ -555,6 +555,10 @@ tbody tr:nth-child(even) {
   gap: 6px;
 }
 
+.reserve-field--hidden {
+  display: none;
+}
+
 .reserve-field span {
   color: #31402d;
   font-size: 1.02rem;
@@ -562,6 +566,7 @@ tbody tr:nth-child(even) {
 }
 
 .reserve-field input,
+.reserve-field select,
 .reserve-field textarea {
   width: 100%;
   min-height: 50px;
@@ -571,6 +576,10 @@ tbody tr:nth-child(even) {
   background: #ffffff;
   color: #253222;
   outline: none;
+}
+
+.reserve-field select option {
+  color: #253222;
 }
 
 .reserve-field textarea {
@@ -584,6 +593,7 @@ tbody tr:nth-child(even) {
 }
 
 .reserve-field input:focus,
+.reserve-field select:focus,
 .reserve-field textarea:focus {
   border-color: rgba(199, 102, 29, 0.64);
   box-shadow: 0 0 0 3px rgba(199, 102, 29, 0.13);
