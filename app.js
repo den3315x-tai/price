@@ -59,8 +59,8 @@ const FIELD_ORDER = [
   "發票",
 ];
 
-const CARD_SUMMARY_FIELDS = ["年份", "車號", "排氣量", "里程數", "售價"];
-const CARD_DETAIL_FIELDS = FIELD_ORDER.filter((field) => !CARD_SUMMARY_FIELDS.includes(field));
+const DEFAULT_CARD_SUMMARY_FIELDS = ["年份", "車號", "排氣量", "里程數", "售價"];
+const PLATE_SEARCH_CARD_SUMMARY_FIELDS = ["年份", "車號", "車型", "排氣量", "里程數", "售價"];
 
 const dom = {
   plateInput: document.querySelector("#plateInput"),
@@ -522,18 +522,27 @@ function renderResults() {
   dom.tableBody.innerHTML = state.filteredRows.map(renderTableRow).join("");
 }
 
+function getCardSummaryFields() {
+  return state.filters.plate ? PLATE_SEARCH_CARD_SUMMARY_FIELDS : DEFAULT_CARD_SUMMARY_FIELDS;
+}
+
+function getCardDetailFields() {
+  const summaryFields = getCardSummaryFields();
+  return FIELD_ORDER.filter((field) => !summaryFields.includes(field));
+}
+
 function renderMobileCard(row, index) {
   return `
     <details class="result-card">
       <summary class="result-card__summary">
         <div class="result-card__summary-main">
-          ${CARD_SUMMARY_FIELDS.map((field) => renderSummaryItem(field, row[field])).join("")}
+          ${getCardSummaryFields().map((field) => renderSummaryItem(field, row[field])).join("")}
         </div>
         <span class="result-card__toggle" style="${vehicleColorStyle(row.顏色)}" aria-hidden="true">展開詳細</span>
       </summary>
       <div class="result-card__details">
         <div class="result-card__grid">
-          ${CARD_DETAIL_FIELDS.map((field) => renderMetaItem(field, row[field], field === "車況備注")).join("")}
+          ${getCardDetailFields().map((field) => renderMetaItem(field, row[field], field === "車況備注")).join("")}
         </div>
         <button class="reserve-button reserve-button--card" type="button" data-reserve-index="${index}">收訂</button>
       </div>
