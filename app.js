@@ -80,6 +80,8 @@ const dom = {
   reserveConfirm: document.querySelector("#reserveConfirm"),
   reserveStatus: document.querySelector("#reserveStatus"),
   reserveBusiness: document.querySelector("#reserveBusiness"),
+  reserveBusinessOtherField: document.querySelector("#reserveBusinessOtherField"),
+  reserveBusinessOther: document.querySelector("#reserveBusinessOther"),
   reserveYear: document.querySelector("#reserveYear"),
   reserveModel: document.querySelector("#reserveModel"),
   reserveColor: document.querySelector("#reserveColor"),
@@ -190,6 +192,7 @@ function bindEvents() {
     }
   });
 
+  dom.reserveBusiness.addEventListener("change", handleReserveBusinessChange);
   dom.reserveClose.addEventListener("click", closeReserveModal);
   dom.reserveCancel.addEventListener("click", closeReserveModal);
   dom.reserveForm.addEventListener("submit", submitReserveForm);
@@ -560,6 +563,8 @@ function openReserveModal(index) {
   dom.reserveForm.reset();
   dom.reserveStatus.textContent = "";
   dom.reserveBusiness.value = "";
+  dom.reserveBusinessOther.value = "";
+  handleReserveBusinessChange();
   dom.reserveYear.value = row.年份 || "-";
   dom.reserveModel.value = row.車型 || "-";
   dom.reserveColor.value = row.顏色 || "-";
@@ -575,6 +580,24 @@ function closeReserveModal() {
   dom.reserveConfirm.disabled = false;
 }
 
+function handleReserveBusinessChange() {
+  const isOther = dom.reserveBusiness.value === "其他";
+  dom.reserveBusinessOtherField.classList.toggle("reserve-field--hidden", !isOther);
+  dom.reserveBusinessOther.required = isOther;
+
+  if (!isOther) {
+    dom.reserveBusinessOther.value = "";
+  }
+}
+
+function getReserveBusinessValue() {
+  if (dom.reserveBusiness.value === "其他") {
+    return dom.reserveBusinessOther.value.trim();
+  }
+
+  return dom.reserveBusiness.value.trim();
+}
+
 async function submitReserveForm(event) {
   event.preventDefault();
 
@@ -582,17 +605,25 @@ async function submitReserveForm(event) {
     return;
   }
 
+  const selectedBusiness = dom.reserveBusiness.value.trim();
+  const businessValue = getReserveBusinessValue();
   const reserve = {
-    業務: dom.reserveBusiness.value.trim(),
+    業務: businessValue,
     收定: dom.reserveAmount.value.trim(),
     貸款: dom.reserveLoan.value.trim(),
     換車: dom.reserveTrade.value.trim(),
     備註: dom.reserveNote.value.trim(),
   };
 
-  if (!reserve.業務) {
-    dom.reserveStatus.textContent = "請輸入業務。";
+  if (!selectedBusiness) {
+    dom.reserveStatus.textContent = "請選擇業務。";
     dom.reserveBusiness.focus();
+    return;
+  }
+
+  if (selectedBusiness === "其他" && !businessValue) {
+    dom.reserveStatus.textContent = "請輸入其他業務。";
+    dom.reserveBusinessOther.focus();
     return;
   }
 
