@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>車價查詢系統</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css?v=20260702-color-toggle" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <main class="layout">
+        <section class="panel filters-panel" aria-labelledby="filters-title">
+          <h2 id="filters-title" class="filters-title">條件篩選</h2>
+
+          <div class="search-grid">
+            <label class="field field--full">
+              <span>品牌</span>
+              <select id="brandSelect">
+                <option value="">請選擇品牌</option>
+              </select>
+            </label>
+
+            <label class="field field--full">
+              <span>車型</span>
+              <select id="modelSelect" disabled>
+                <option value="">請選擇車型</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>年份</span>
+              <select id="yearSelect">
+                <option value="">請選擇年份</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>車號 (可選)</span>
+              <div class="search-input">
+                <span class="search-input__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.9"/>
+                    <path d="M16 16 20 20" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <input id="plateInput" type="search" placeholder="輸入車號關鍵字" autocomplete="off" />
+              </div>
+            </label>
+          </div>
+
+          <div class="actions-row">
+            <button id="resetFilters" class="secondary-button" type="button">清除條件</button>
+            <button id="searchButton" class="primary-button" type="button">查詢</button>
+          </div>
+
+          <p id="statusMessage" class="status-message" role="status">讀取資料中...</p>
+        </section>
+
+        <section class="results-head">
+          <div class="results-head__summary">
+            <span class="results-head__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="5" width="16" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M8 9h8M8 12h8M8 15h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <p id="resultSummary">共 0 筆資料</p>
+          </div>
+          <div class="results-sort">最新買進日</div>
+        </section>
+
+        <section id="mobileResults" class="card-list" aria-label="行動版結果列表"></section>
+
+        <section class="panel table-panel" aria-label="桌面版結果表格">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>買進日</th>
+                  <th>來源</th>
+                  <th>車號</th>
+                  <th>品牌</th>
+                  <th>車型</th>
+                  <th>年份</th>
+                  <th>排氣量</th>
+                  <th>顏色</th>
+                  <th>里程數</th>
+                  <th>一手車</th>
+                  <th>車況</th>
+                  <th>車況備注</th>
+                  <th>車輛照片</th>
+                  <th>售價</th>
+                  <th>發票</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js?v=20260702-plate-clear"></script>
+  </body>
+</html>
