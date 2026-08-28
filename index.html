@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css?v=20260702-color-toggle" />
+    <link rel="stylesheet" href="./style.css?v=20260828-reserve" />
   </head>
   <body>
     <div class="page-shell">
@@ -97,6 +97,7 @@
                   <th>車輛照片</th>
                   <th>售價</th>
                   <th>發票</th>
+                  <th>收訂</th>
                 </tr>
               </thead>
               <tbody id="tableBody"></tbody>
@@ -106,6 +107,69 @@
       </main>
     </div>
 
-    <script src="./app.js?v=20260702-plate-clear"></script>
+    <div id="reserveModal" class="reserve-modal" hidden>
+      <div class="reserve-dialog" role="dialog" aria-modal="true" aria-labelledby="reserveTitle">
+        <div class="reserve-dialog__head">
+          <h2 id="reserveTitle">收訂資料</h2>
+          <button id="reserveClose" class="reserve-dialog__close" type="button" aria-label="關閉">×</button>
+        </div>
+
+        <form id="reserveForm" class="reserve-form">
+          <label class="reserve-field">
+            <span>業務</span>
+            <input id="reserveBusiness" type="text" autocomplete="off" required />
+          </label>
+
+          <label class="reserve-field">
+            <span>年份</span>
+            <input id="reserveYear" type="text" readonly />
+          </label>
+
+          <label class="reserve-field">
+            <span>車型</span>
+            <input id="reserveModel" type="text" readonly />
+          </label>
+
+          <label class="reserve-field">
+            <span>顏色</span>
+            <input id="reserveColor" type="text" readonly />
+          </label>
+
+          <label class="reserve-field">
+            <span>車牌</span>
+            <input id="reservePlate" type="text" readonly />
+          </label>
+
+          <label class="reserve-field">
+            <span>收定</span>
+            <input id="reserveAmount" type="text" inputmode="decimal" autocomplete="off" required />
+          </label>
+
+          <label class="reserve-field">
+            <span>貸款</span>
+            <input id="reserveLoan" type="text" autocomplete="off" />
+          </label>
+
+          <label class="reserve-field">
+            <span>換車</span>
+            <input id="reserveTrade" type="text" autocomplete="off" />
+          </label>
+
+          <label class="reserve-field reserve-field--full">
+            <span>備註</span>
+            <textarea id="reserveNote" rows="3"></textarea>
+          </label>
+
+          <p id="reserveStatus" class="reserve-status" role="status"></p>
+
+          <div class="reserve-actions">
+            <button id="reserveCancel" class="secondary-button" type="button">取消</button>
+            <button id="reserveConfirm" class="primary-button" type="submit">確認收訂</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./app.js?v=20260828-reserve"></script>
   </body>
 </html>
