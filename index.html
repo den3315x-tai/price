@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css?v=20260828-business-select" />
+    <link rel="stylesheet" href="./style.css?v=20260829-copy-reserve" />
   </head>
   <body>
     <div class="page-shell">
@@ -179,6 +179,14 @@
 
           <p id="reserveStatus" class="reserve-status" role="status"></p>
 
+          <div id="reserveMessagePanel" class="reserve-message-panel" hidden>
+            <label class="reserve-field reserve-field--full">
+              <span>收訂通知內容</span>
+              <textarea id="reserveMessage" rows="11" readonly></textarea>
+            </label>
+            <button id="reserveCopy" class="reserve-copy-button" type="button">複製訊息</button>
+          </div>
+
           <div class="reserve-actions">
             <button id="reserveCancel" class="secondary-button" type="button">取消</button>
             <button id="reserveConfirm" class="primary-button" type="submit">確認收訂</button>
@@ -187,6 +195,6 @@
       </div>
     </div>
 
-    <script src="./app.js?v=20260828-business-select"></script>
+    <script src="./app.js?v=20260829-copy-reserve"></script>
   </body>
 </html>
