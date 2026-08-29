@@ -490,7 +490,8 @@ tbody tr:nth-child(even) {
   line-height: 1.15;
 }
 
-.reserve-modal[hidden] {
+.reserve-modal[hidden],
+.reserve-message-panel[hidden] {
   display: none;
 }
 
@@ -606,6 +607,32 @@ tbody tr:nth-child(even) {
   font-weight: 800;
 }
 
+.reserve-message-panel {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid rgba(122, 131, 115, 0.24);
+  border-radius: 14px;
+  background: #ecefe3;
+}
+
+.reserve-message-panel textarea {
+  min-height: 230px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.reserve-copy-button {
+  width: 100%;
+  border: 1px solid rgba(82, 93, 75, 0.32);
+  background: linear-gradient(180deg, #4f544b, #454941);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
 .reserve-actions {
   display: grid;
   grid-template-columns: 0.9fr 1.2fr;
@@ -645,6 +672,7 @@ tbody tr:nth-child(even) {
 
   .reserve-field--full,
   .reserve-status,
+  .reserve-message-panel,
   .reserve-actions {
     grid-column: 1 / -1;
   }
