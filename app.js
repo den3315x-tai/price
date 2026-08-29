@@ -79,6 +79,9 @@ const dom = {
   reserveCancel: document.querySelector("#reserveCancel"),
   reserveConfirm: document.querySelector("#reserveConfirm"),
   reserveStatus: document.querySelector("#reserveStatus"),
+  reserveMessagePanel: document.querySelector("#reserveMessagePanel"),
+  reserveMessage: document.querySelector("#reserveMessage"),
+  reserveCopy: document.querySelector("#reserveCopy"),
   reserveBusiness: document.querySelector("#reserveBusiness"),
   reserveBusinessOtherField: document.querySelector("#reserveBusinessOtherField"),
   reserveBusinessOther: document.querySelector("#reserveBusinessOther"),
@@ -193,6 +196,7 @@ function bindEvents() {
   });
 
   dom.reserveBusiness.addEventListener("change", handleReserveBusinessChange);
+  dom.reserveCopy.addEventListener("click", copyReserveMessage);
   dom.reserveClose.addEventListener("click", closeReserveModal);
   dom.reserveCancel.addEventListener("click", closeReserveModal);
   dom.reserveForm.addEventListener("submit", submitReserveForm);
@@ -562,6 +566,8 @@ function openReserveModal(index) {
   state.selectedReserveRow = row;
   dom.reserveForm.reset();
   dom.reserveStatus.textContent = "";
+  dom.reserveMessage.value = "";
+  dom.reserveMessagePanel.hidden = true;
   dom.reserveBusiness.value = "";
   dom.reserveBusinessOther.value = "";
   handleReserveBusinessChange();
@@ -577,6 +583,8 @@ function closeReserveModal() {
   dom.reserveModal.hidden = true;
   state.selectedReserveRow = null;
   dom.reserveStatus.textContent = "";
+  dom.reserveMessage.value = "";
+  dom.reserveMessagePanel.hidden = true;
   dom.reserveConfirm.disabled = false;
 }
 
@@ -598,7 +606,7 @@ function getReserveBusinessValue() {
   return dom.reserveBusiness.value.trim();
 }
 
-async function submitReserveForm(event) {
+function submitReserveForm(event) {
   event.preventDefault();
 
   if (!state.selectedReserveRow) {
@@ -642,29 +650,65 @@ async function submitReserveForm(event) {
     備註: reserve.備註,
   };
 
-  dom.reserveConfirm.disabled = true;
-  dom.reserveStatus.textContent = "收訂通知送出中...";
+  dom.reserveMessage.value = buildReserveMessage(vehicle);
+  dom.reserveMessagePanel.hidden = false;
+  dom.reserveStatus.textContent = "收訂通知已產生，請複製後貼到 LINE 群組。";
+  dom.reserveMessage.focus();
+  dom.reserveMessage.select();
+}
+
+function buildReserveMessage(vehicle) {
+  return [
+    "車輛收訂通知",
+    "業務：" + safeText(vehicle.業務),
+    "年份：" + safeText(vehicle.年份),
+    "車型：" + safeText(vehicle.車型),
+    "顏色：" + safeText(vehicle.顏色),
+    "車牌：" + safeText(vehicle.車號),
+    "收定：" + safeText(vehicle.收定),
+    "貸款：" + safeText(vehicle.貸款),
+    "換車：" + safeText(vehicle.換車),
+    "備註：" + safeText(vehicle.備註),
+    "操作時間：" + formatLocalTimestamp(),
+  ].join("\n");
+}
+
+async function copyReserveMessage() {
+  const message = dom.reserveMessage.value;
+  if (!message) {
+    dom.reserveStatus.textContent = "請先確認收訂，產生通知內容。";
+    return;
+  }
 
   try {
-    await fetch(API_CONFIG.apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "text/plain;charset=utf-8",
-      },
-      body: JSON.stringify({
-        action: "reserve",
-        vehicle,
-        reserve,
-      }),
-    });
-
-    dom.reserveStatus.textContent = "已送出收訂通知。";
-    window.setTimeout(closeReserveModal, 900);
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(message);
+    } else {
+      dom.reserveMessage.focus();
+      dom.reserveMessage.select();
+      document.execCommand("copy");
+    }
+    dom.reserveStatus.textContent = "已複製，可貼到 LINE 群組。";
   } catch (error) {
     console.error(error);
-    dom.reserveStatus.textContent = "送出失敗，請稍後再試。";
-    dom.reserveConfirm.disabled = false;
+    dom.reserveMessage.focus();
+    dom.reserveMessage.select();
+    dom.reserveStatus.textContent = "無法自動複製，請手動長按或全選複製。";
   }
+}
+
+function formatLocalTimestamp() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  return `${year}-${month}-${day} ${hours}:${minutes}`;
+}
+
+function safeText(value) {
+  return String(value || "").trim();
 }
 
 function vehicleColorStyle(color) {
