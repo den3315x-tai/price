@@ -82,9 +82,6 @@ const dom = {
   reserveMessagePanel: document.querySelector("#reserveMessagePanel"),
   reserveMessage: document.querySelector("#reserveMessage"),
   reserveCopy: document.querySelector("#reserveCopy"),
-  reserveBusiness: document.querySelector("#reserveBusiness"),
-  reserveBusinessOtherField: document.querySelector("#reserveBusinessOtherField"),
-  reserveBusinessOther: document.querySelector("#reserveBusinessOther"),
   reserveYear: document.querySelector("#reserveYear"),
   reserveModel: document.querySelector("#reserveModel"),
   reserveColor: document.querySelector("#reserveColor"),
@@ -195,7 +192,6 @@ function bindEvents() {
     }
   });
 
-  dom.reserveBusiness.addEventListener("change", handleReserveBusinessChange);
   dom.reserveCopy.addEventListener("click", copyReserveMessage);
   dom.reserveClose.addEventListener("click", closeReserveModal);
   dom.reserveCancel.addEventListener("click", closeReserveModal);
@@ -568,15 +564,12 @@ function openReserveModal(index) {
   dom.reserveStatus.textContent = "";
   dom.reserveMessage.value = "";
   dom.reserveMessagePanel.hidden = true;
-  dom.reserveBusiness.value = "";
-  dom.reserveBusinessOther.value = "";
-  handleReserveBusinessChange();
   dom.reserveYear.value = row.年份 || "-";
   dom.reserveModel.value = row.車型 || "-";
   dom.reserveColor.value = row.顏色 || "-";
   dom.reservePlate.value = row.車號 || "-";
   dom.reserveModal.hidden = false;
-  dom.reserveBusiness.focus();
+  dom.reserveAmount.focus();
 }
 
 function closeReserveModal() {
@@ -588,24 +581,6 @@ function closeReserveModal() {
   dom.reserveConfirm.disabled = false;
 }
 
-function handleReserveBusinessChange() {
-  const isOther = dom.reserveBusiness.value === "其他";
-  dom.reserveBusinessOtherField.classList.toggle("reserve-field--hidden", !isOther);
-  dom.reserveBusinessOther.required = isOther;
-
-  if (!isOther) {
-    dom.reserveBusinessOther.value = "";
-  }
-}
-
-function getReserveBusinessValue() {
-  if (dom.reserveBusiness.value === "其他") {
-    return dom.reserveBusinessOther.value.trim();
-  }
-
-  return dom.reserveBusiness.value.trim();
-}
-
 function submitReserveForm(event) {
   event.preventDefault();
 
@@ -613,27 +588,12 @@ function submitReserveForm(event) {
     return;
   }
 
-  const selectedBusiness = dom.reserveBusiness.value.trim();
-  const businessValue = getReserveBusinessValue();
   const reserve = {
-    業務: businessValue,
     收定: dom.reserveAmount.value.trim(),
     貸款: dom.reserveLoan.value.trim(),
     換車: dom.reserveTrade.value.trim(),
     備註: dom.reserveNote.value.trim(),
   };
-
-  if (!selectedBusiness) {
-    dom.reserveStatus.textContent = "請選擇業務。";
-    dom.reserveBusiness.focus();
-    return;
-  }
-
-  if (selectedBusiness === "其他" && !businessValue) {
-    dom.reserveStatus.textContent = "請輸入其他業務。";
-    dom.reserveBusinessOther.focus();
-    return;
-  }
 
   if (!reserve.收定) {
     dom.reserveStatus.textContent = "請輸入收定金額。";
@@ -643,7 +603,6 @@ function submitReserveForm(event) {
 
   const vehicle = {
     ...state.selectedReserveRow,
-    業務: reserve.業務,
     收定: reserve.收定,
     貸款: reserve.貸款,
     換車: reserve.換車,
@@ -659,18 +618,21 @@ function submitReserveForm(event) {
 
 function buildReserveMessage(vehicle) {
   return [
-    "車輛收訂通知",
-    "業務：" + safeText(vehicle.業務),
     "年份：" + safeText(vehicle.年份),
     "車型：" + safeText(vehicle.車型),
     "顏色：" + safeText(vehicle.顏色),
     "車牌：" + safeText(vehicle.車號),
     "收定：" + safeText(vehicle.收定),
-    "貸款：" + safeText(vehicle.貸款),
-    "換車：" + safeText(vehicle.換車),
-    "備註：" + safeText(vehicle.備註),
+    optionalMessageLine("貸款", vehicle.貸款),
+    optionalMessageLine("換車", vehicle.換車),
+    optionalMessageLine("備註", vehicle.備註),
     "操作時間：" + formatLocalTimestamp(),
-  ].join("\n");
+  ].filter(Boolean).join("\n");
+}
+
+function optionalMessageLine(label, value) {
+  const text = safeText(value);
+  return text ? `${label}：${text}` : "";
 }
 
 async function copyReserveMessage() {
