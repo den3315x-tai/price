@@ -59,6 +59,7 @@ const FIELD_ORDER = [
   "發票",
 ];
 
+const DETAIL_EXTRA_FIELDS = ["8891編號"];
 const DEFAULT_CARD_SUMMARY_FIELDS = ["年份", "車號", "排氣量", "里程數", "售價"];
 const PLATE_SEARCH_CARD_SUMMARY_FIELDS = ["年份", "車號", "車型", "排氣量", "里程數", "售價"];
 
@@ -250,6 +251,7 @@ function normalizeRows(rows) {
         車輛照片: getFirstValue(row, ["車輛照片", "照片", "圖片", "照片網址", "圖片網址"]) || "-",
         售價: normalizePrice(getFirstValue(row, ["售價", "價格"])) || "未開價",
         發票: normalizeNullDisplay(getFirstValue(row, ["發票", "F"])) || "-",
+        8891編號: normalizeNullDisplay(getFirstValue(row, ["8891編號", "8891"])) || "-",
         __buyDateSort: normalizeBuyDateSortValue(rawBuyDate),
         __yearSort: normalizeYearSortValue(rawYear),
       };
@@ -531,7 +533,10 @@ function getCardSummaryFields() {
 
 function getCardDetailFields() {
   const summaryFields = getCardSummaryFields();
-  return FIELD_ORDER.filter((field) => !summaryFields.includes(field));
+  return [
+    ...FIELD_ORDER.filter((field) => !summaryFields.includes(field)),
+    ...DETAIL_EXTRA_FIELDS,
+  ];
 }
 
 function renderMobileCard(row, index) {
