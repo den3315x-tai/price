@@ -251,7 +251,7 @@ function normalizeRows(rows) {
         車輛照片: getFirstValue(row, ["車輛照片", "照片", "圖片", "照片網址", "圖片網址"]) || "-",
         售價: normalizePrice(getFirstValue(row, ["售價", "價格"])) || "未開價",
         發票: normalizeNullDisplay(getFirstValue(row, ["發票", "F"])) || "-",
-        8891編號: normalizeNullDisplay(getFirstValue(row, ["8891編號", "8891"])) || "-",
+        "8891編號": normalizeNullDisplay(getFirstValue(row, ["8891編號", "8891"])) || "-",
         __buyDateSort: normalizeBuyDateSortValue(rawBuyDate),
         __yearSort: normalizeYearSortValue(rawYear),
       };
