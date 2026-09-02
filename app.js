@@ -60,6 +60,7 @@ const FIELD_ORDER = [
 ];
 
 const DETAIL_EXTRA_FIELDS = ["8891編號"];
+const TABLE_FIELD_ORDER = [...FIELD_ORDER, ...DETAIL_EXTRA_FIELDS];
 const DEFAULT_CARD_SUMMARY_FIELDS = ["年份", "車號", "排氣量", "里程數", "售價"];
 const PLATE_SEARCH_CARD_SUMMARY_FIELDS = ["年份", "車號", "車型", "排氣量", "里程數", "售價"];
 
@@ -511,7 +512,7 @@ function renderResults() {
   if (!state.hasSearched) {
     dom.resultSummary.textContent = "尚未查詢";
     dom.mobileResults.innerHTML = '<div class="empty-state">請先選擇品牌與車型，或直接輸入車號關鍵字後查詢。</div>';
-    dom.tableBody.innerHTML = '<tr><td colspan="16">請先選擇品牌與車型，或直接輸入車號關鍵字後查詢。</td></tr>';
+    dom.tableBody.innerHTML = '<tr><td colspan="17">請先選擇品牌與車型，或直接輸入車號關鍵字後查詢。</td></tr>';
     return;
   }
 
@@ -519,7 +520,7 @@ function renderResults() {
 
   if (state.filteredRows.length === 0) {
     dom.mobileResults.innerHTML = '<div class="empty-state">查無符合條件的車輛資料</div>';
-    dom.tableBody.innerHTML = '<tr><td colspan="16">查無符合條件的車輛資料</td></tr>';
+    dom.tableBody.innerHTML = '<tr><td colspan="17">查無符合條件的車輛資料</td></tr>';
     return;
   }
 
@@ -740,7 +741,7 @@ function renderMetaItem(label, value, isFull) {
 function renderTableRow(row, index) {
   return `
     <tr>
-      ${FIELD_ORDER.map((field) => `<td class="${statusClass(field, row[field])}">${renderTableCell(field, row[field])}</td>`).join("")}
+      ${TABLE_FIELD_ORDER.map((field) => `<td class="${statusClass(field, row[field])}">${renderTableCell(field, row[field])}</td>`).join("")}
       <td><button class="reserve-button reserve-button--table" type="button" data-reserve-index="${index}">收訂</button></td>
     </tr>
   `;
