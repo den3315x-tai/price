@@ -628,6 +628,7 @@ function buildReserveMessage(vehicle) {
     "車型：" + safeText(vehicle.車型),
     "顏色：" + safeText(vehicle.顏色),
     "車牌：" + safeText(vehicle.車號),
+    optionalVehicleMessageLine("8891編號", vehicle["8891編號"]),
     "收定：" + safeText(vehicle.收定),
     optionalMessageLine("貸款", vehicle.貸款),
     optionalMessageLine("換車", vehicle.換車),
@@ -640,6 +641,15 @@ function optionalMessageLine(label, value) {
   const text = safeText(value);
   return text ? `${label}：${text}` : "";
 }
+
+function optionalVehicleMessageLine(label, value) {
+  const text = safeText(value);
+  if (!text || text === "-" || text.toUpperCase() === "NULL") {
+    return "";
+  }
+  return `${label}：${text}`;
+}
+
 
 async function copyReserveMessage() {
   const message = dom.reserveMessage.value;
