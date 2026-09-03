@@ -579,6 +579,7 @@ function openReserveModal(index) {
   const reserve8891 = optionalVehicleValue(row["8891編號"]);
   dom.reserve8891.value = reserve8891;
   dom.reserve8891Field.hidden = !reserve8891;
+  dom.reserve8891Field.classList.toggle("reserve-field--hidden", !reserve8891);
   dom.reserveModal.hidden = false;
   dom.reserveAmount.focus();
 }
