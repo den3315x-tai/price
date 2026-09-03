@@ -88,6 +88,8 @@ const dom = {
   reserveModel: document.querySelector("#reserveModel"),
   reserveColor: document.querySelector("#reserveColor"),
   reservePlate: document.querySelector("#reservePlate"),
+  reserve8891Field: document.querySelector("#reserve8891Field"),
+  reserve8891: document.querySelector("#reserve8891"),
   reserveAmount: document.querySelector("#reserveAmount"),
   reserveLoan: document.querySelector("#reserveLoan"),
   reserveTrade: document.querySelector("#reserveTrade"),
@@ -574,6 +576,9 @@ function openReserveModal(index) {
   dom.reserveModel.value = row.車型 || "-";
   dom.reserveColor.value = row.顏色 || "-";
   dom.reservePlate.value = row.車號 || "-";
+  const reserve8891 = optionalVehicleValue(row["8891編號"]);
+  dom.reserve8891.value = reserve8891;
+  dom.reserve8891Field.hidden = !reserve8891;
   dom.reserveModal.hidden = false;
   dom.reserveAmount.focus();
 }
@@ -642,12 +647,17 @@ function optionalMessageLine(label, value) {
   return text ? `${label}：${text}` : "";
 }
 
-function optionalVehicleMessageLine(label, value) {
+function optionalVehicleValue(value) {
   const text = safeText(value);
   if (!text || text === "-" || text.toUpperCase() === "NULL") {
     return "";
   }
-  return `${label}：${text}`;
+  return text;
+}
+
+function optionalVehicleMessageLine(label, value) {
+  const text = optionalVehicleValue(value);
+  return text ? `${label}：${text}` : "";
 }
 
 
